@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/drawable/rounded_edittext.xml" value="0.24351851851851852" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/drawable/side_nav_bar.xml" value="0.3728205128205128" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/activity_login.xml" value="0.2967032967032967" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/activity_main.xml" value="0.2881619937694704" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/app_bar_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/content_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/dengvaxia_dialog.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/dengvaxia_form_phic.xml" value="0.3046875" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/facility_item.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/feedback_dialog.xml" value="0.23822463768115942" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/feedback_item.xml" value="0.23822463768115942" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/fragment_avail_services.xml" value="0.23822463768115942" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/fragment_change_password.xml" value="0.23822463768115942" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/fragment_home.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/fragment_manage_facility.xml" value="0.33" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/fragment_manage_member.xml" value="0.26957637997432604" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/fragment_manage_specialist.xml" value="0.33" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/fragment_must_services.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/list_layout.xml" value="0.33" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/nav_header_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/new_message_dialog.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/options_dialog.xml" value="0.28802083333333334" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/pin_dialog.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/population_dialog.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/population_dialog_item.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/population_item.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/population_list_dialog.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/profile_checker_dialog.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/schedule_dialog.xml" value="0.67" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/service_status_filter.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/services_item.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/specialist_facilities.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/layout/temporary_layout.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/menu/activity_main_drawer.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/menu/add_head.xml" value="0.2851851851851852" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/menu/download.xml" value="0.2851851851851852" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/menu/download_add.xml" value="0.3296875" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/menu/feedback.xml" value="0.278125" />
+        <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/xml/network_security_config.xml" value="0.13229166666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="NullableNotNullManager">
+    <option name="myDefaultNullable" value="android.support.annotation.Nullable" />
+    <option name="myDefaultNotNull" value="android.support.annotation.NonNull" />
+    <option name="myNullables">
+      <value>
+        <list size="15">
+          <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.Nullable" />
+          <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nullable" />
+          <item index="2" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.Nullable" />
+          <item index="3" class="java.lang.String" itemvalue="android.support.annotation.Nullable" />
+          <item index="4" class="java.lang.String" itemvalue="javax.annotation.CheckForNull" />
+          <item index="5" class="java.lang.String" itemvalue="androidx.annotation.Nullable" />
+          <item index="6" class="java.lang.String" itemvalue="androidx.annotation.RecentlyNullable" />
+          <item index="7" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.qual.Nullable" />
+          <item index="8" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NullableDecl" />
+          <item index="9" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NullableType" />
+          <item index="10" class="java.lang.String" itemvalue="android.annotation.Nullable" />
+          <item index="11" class="java.lang.String" itemvalue="com.android.annotations.Nullable" />
+          <item index="12" class="java.lang.String" itemvalue="org.eclipse.jdt.annotation.Nullable" />
+          <item index="13" class="java.lang.String" itemvalue="io.reactivex.annotations.Nullable" />
+          <item index="14" class="java.lang.String" itemvalue="io.reactivex.rxjava3.annotations.Nullable" />
+        </list>
+      </value>
+    </option>
+    <option name="myNotNulls">
+      <value>
+        <list size="15">
+          <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.NotNull" />
+          <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nonnull" />
+          <item index="2" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.NonNull" />
+          <item index="3" class="java.lang.String" itemvalue="android.support.annotation.NonNull" />
+          <item index="4" class="java.lang.String" itemvalue="androidx.annotation.NonNull" />
+          <item index="5" class="java.lang.String" itemvalue="androidx.annotation.RecentlyNonNull" />
+          <item index="6" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.qual.NonNull" />
+          <item index="7" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NonNullDecl" />
+          <item index="8" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NonNullType" />
+          <item index="9" class="java.lang.String" itemvalue="android.annotation.NonNull" />
+          <item index="10" class="java.lang.String" itemvalue="com.android.annotations.NonNull" />
+          <item index="11" class="java.lang.String" itemvalue="org.eclipse.jdt.annotation.NonNull" />
+          <item index="12" class="java.lang.String" itemvalue="io.reactivex.annotations.NonNull" />
+          <item index="13" class="java.lang.String" itemvalue="io.reactivex.rxjava3.annotations.NonNull" />
+          <item index="14" class="java.lang.String" itemvalue="lombok.NonNull" />
+        </list>
+      </value>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

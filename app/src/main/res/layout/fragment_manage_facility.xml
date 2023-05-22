@@ -1,0 +1,990 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/rounded_edittext" android:padding="5dp">
+
+            <EditText
+                android:id="@+id/facility_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Facility Code *"
+                android:padding="5dp"
+                android:textColor="@color/colorPrimaryDark" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+
+            <EditText
+                android:id="@+id/facility_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Facility Name *"
+                android:padding="5dp"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+
+            <EditText
+                android:id="@+id/facility_abbr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Abbr"
+                android:padding="5dp"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/facility_province"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Province *"
+                android:padding="5dp"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/facility_municipality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Municipality *"
+                android:padding="5dp"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/facility_barangay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Barangay *"
+                android:padding="5dp"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+
+            <EditText
+                android:id="@+id/facility_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Address *"
+                android:padding="5dp"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+
+            <EditText
+                android:id="@+id/facility_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Contact Number *"
+                android:padding="5dp"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+
+            <EditText
+                android:id="@+id/facility_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Email Address *"
+                android:padding="5dp"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+            <EditText
+                android:id="@+id/facility_chief"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Head of Facility (name)  *"
+                android:padding="5dp"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+
+            <EditText
+                android:id="@+id/facility_serviceCapability"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Service Capability"
+                android:focusable="false"
+                android:padding="5dp"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+
+            <EditText
+                android:id="@+id/facility_licensingStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Licensing Status"
+                android:focusable="false"
+                android:padding="5dp"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+
+            <EditText
+                android:id="@+id/facility_ownership"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Ownership"
+                android:focusable="false"
+                android:padding="5dp"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+
+            <EditText
+                android:id="@+id/facility_phicStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="PHIC Accreditation Status"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:focusable="false"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+
+            <EditText
+                android:id="@+id/facility_referralStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="E-Referral Health Facility Status"
+                android:focusable="false"
+                android:padding="5dp"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+
+            <EditText
+                android:id="@+id/facility_hospitalStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Health Facility Status"
+                android:padding="5dp"
+                android:focusable="false"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+            <EditText
+                android:id="@+id/facility_transport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Availability and type of transport"
+                android:focusable="false"
+                android:padding="5dp"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+            <EditText
+                android:id="@+id/facility_latitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Latitude"
+                android:padding="5dp"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+            <EditText
+                android:id="@+id/facility_longitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Longitude"
+                android:padding="5dp"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+        <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TableRow   android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp">
+                <com.google.android.material.card.MaterialCardView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:padding="5dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Schedule"
+                        android:singleLine="true" />
+                </com.google.android.material.card.MaterialCardView>
+            </TableRow>
+            <TableRow   android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp">
+                <com.google.android.material.textfield.TextInputLayout android:layout_weight=".45" android:layout_marginRight="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_dayFrom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="FROM (DAY)"
+                        android:focusable="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_weight=".1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:padding="5dp"  />
+
+                <com.google.android.material.textfield.TextInputLayout android:layout_weight=".45" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_dayTo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="TO (DAY):"
+                        android:focusable="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp">
+                <com.google.android.material.textfield.TextInputLayout android:layout_weight=".45" android:layout_marginRight="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_timeFrom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="FROM (TIME)"
+                        android:focusable="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_weight=".1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:padding="5dp"  />
+
+                <com.google.android.material.textfield.TextInputLayout android:layout_weight=".45" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_timeTo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="TO (TIME):"
+                        android:focusable="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp">
+                <com.google.android.material.textfield.TextInputLayout android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_schedNote"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Other Notes regarding the Schedule"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+        </TableLayout>
+
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"  android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="5dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="Available Services"
+                android:singleLine="true" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_marginTop="5dp"  android:layout_height="wrap_content"  android:background="@drawable/rounded_edittext" android:padding="5dp">
+            <EditText
+                android:id="@+id/facility_otherServices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Other Services"
+                android:focusable="false"
+                android:padding="5dp"  />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TableLayout android:id="@+id/table_otherServices"  android:visibility="gone"  android:layout_width="match_parent" android:layout_height="wrap_content">
+
+            <TableRow android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp" android:layout_marginBottom="20dp">
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_birthing"  android:layout_weight=".5" android:layout_marginRight="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_birthing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Birthing Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout  android:id="@+id/facility_til_dialysis" android:layout_weight=".5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_dialysis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Dialysis Center Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+        </TableLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_marginTop="5dp"  android:layout_height="wrap_content"  android:background="@drawable/rounded_edittext" android:padding="5dp">
+            <EditText
+                android:id="@+id/facility_consultServices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Consultation"
+                android:focusable="false"
+                android:padding="5dp"  />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TableLayout android:id="@+id/table_consult"  android:visibility="gone"  android:layout_width="match_parent" android:layout_height="wrap_content">
+
+            <TableRow android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp"  android:layout_marginBottom="20dp" >
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_consultPrivate"  android:layout_weight=".5" android:layout_marginRight="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_consultPrivate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Private Clinic Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout  android:id="@+id/facility_til_consultPublic" android:layout_weight=".5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_consultPublic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Public Clinic Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+        </TableLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_marginTop="5dp"  android:layout_height="wrap_content"  android:background="@drawable/rounded_edittext" android:padding="5dp">
+            <EditText
+                android:id="@+id/facility_tbdotsServices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="TB DOTS"
+                android:focusable="false"
+                android:padding="5dp"  />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TableLayout android:id="@+id/table_tbdots"  android:visibility="gone"  android:layout_width="match_parent" android:layout_height="wrap_content">
+
+            <TableRow android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp" android:layout_marginBottom="20dp">
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_tbdots1"  android:layout_weight=".5" android:layout_marginRight="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_tbdots1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Category 1 Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout  android:id="@+id/facility_til_tbdots2" android:layout_weight=".5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_tbdots2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Category 2 Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+        </TableLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_marginTop="5dp"  android:layout_height="wrap_content"  android:background="@drawable/rounded_edittext" android:padding="5dp">
+            <EditText
+                android:id="@+id/facility_abtcServices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Animal Bite Treatment Center (ABTC)"
+                android:focusable="false"
+                android:padding="5dp"  />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TableLayout android:id="@+id/table_abtc"  android:visibility="gone"  android:layout_width="match_parent" android:layout_height="wrap_content">
+
+            <TableRow android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp" >
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_abtc1"  android:layout_weight=".5" android:layout_marginRight="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_abtc1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Category 1 Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout  android:id="@+id/facility_til_abtc2" android:layout_weight=".5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_abtc2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Category 2 Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp" android:layout_marginBottom="20dp">
+                <com.google.android.material.textfield.TextInputLayout  android:id="@+id/facility_til_abtc3" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_abtc3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Category 3 Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+        </TableLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_marginTop="5dp"  android:layout_height="wrap_content"  android:background="@drawable/rounded_edittext" android:padding="5dp">
+            <EditText
+                android:id="@+id/facility_dentalServices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Dental"
+                android:focusable="false"
+                android:padding="5dp"  />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TableLayout android:id="@+id/table_dentalServices"  android:visibility="gone"  android:layout_width="match_parent" android:layout_height="wrap_content">
+
+            <TableRow android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp" >
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_dentalExtract"  android:layout_weight=".5" android:layout_marginRight="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_dentalExtract"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Extraction Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout  android:id="@+id/facility_til_dentalTempFill" android:layout_weight=".5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_dentalTempFill"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Temporary Filling Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp">
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_dentalPermFill" android:layout_weight=".5" android:layout_marginRight="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_dentalPermFill"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Permanent Filling Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout  android:id="@+id/facility_til_dentalOrtho" android:layout_weight=".5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_dentalOrtho"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Orthodontics Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp"  android:layout_marginBottom="20dp" >
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_dentalClean" android:layout_weight="1" android:layout_marginRight="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_dentalClean"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Oral prophylaxis (Cleaning) Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+        </TableLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent"  android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+            <EditText
+                android:id="@+id/facility_labServices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Laboratory Services"
+                android:focusable="false"
+                android:padding="5dp"  />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TableLayout android:id="@+id/table_laboratoryServices" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TableRow android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp">
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_labXray" android:layout_weight=".5" android:layout_marginRight="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_labXray"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Chest X-ray Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_labCBC" android:layout_weight=".5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_labCBC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Complete Blood Count Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp">
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_labCreatine" android:layout_weight=".5" android:layout_marginRight="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_labCreatine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Creatinine Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_labECG" android:layout_weight=".5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_labECG"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="ECG Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp">
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_labFBS" android:layout_weight=".5" android:layout_marginRight="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_labFBS"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="FBS Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_labFecalysis" android:layout_weight=".5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_labFecalysis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Fecalysis Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp">
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_labFOB" android:layout_weight=".5" android:layout_marginRight="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_labFOB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Fecal Occult Blood Cost"
+
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_labHbAIC" android:layout_weight=".5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_labHbAIC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="HbAIC Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp">
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_labLipid" android:layout_weight=".5" android:layout_marginRight="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_labLipid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Lipid profile Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_labOGT" android:layout_weight=".5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_labOGT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Oral Glucose Tolerance Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp">
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_labPap" android:layout_weight=".5" android:layout_marginRight="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_labPap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Pap smear Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_labSputum" android:layout_weight=".5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_labsputum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Sputum Microscopy Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp" android:layout_marginBottom="20dp">
+                <com.google.android.material.textfield.TextInputLayout  android:id="@+id/facility_til_labUrine" android:layout_weight=".5" android:layout_marginRight="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_labUrine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Urinalysis Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </TableRow>
+
+        </TableLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_marginTop="5dp"  android:layout_height="wrap_content"  android:background="@drawable/rounded_edittext" android:padding="5dp">
+            <EditText
+                android:id="@+id/facility_famPlanServices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Family Planning"
+                android:focusable="false"
+                android:padding="5dp"  />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TableLayout android:id="@+id/table_famplan" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TableRow android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp">
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_famNsv" android:layout_weight=".5" android:layout_marginRight="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_famNsv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="NSV Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_famBtl" android:layout_weight=".5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_famBtl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="BTL COST"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp">
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_famCondom" android:layout_weight=".5" android:layout_marginRight="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_famCondom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Condom Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_famLam" android:layout_weight=".5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_famLam"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="LAM Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp">
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_famProgesterone" android:layout_weight=".5" android:layout_marginRight="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_famProgesterone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Progesterone Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_famImplant" android:layout_weight=".5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_famImplant"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Implant Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp">
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_famPOP" android:layout_weight=".5" android:layout_marginRight="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_famPOP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="(Oral Pills) Progesterone Only Pills Cost"
+
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_famCOC" android:layout_weight=".5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_famCOC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="(Oral Pills) Combine Oral Contraceptive Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp">
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_famPIC" android:layout_weight=".5" android:layout_marginRight="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_famPIC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="(DMPA) Pure Inject Contraceptive Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_famCIC" android:layout_weight=".5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_famCIC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="(DMPA) Combine Inject Contraceptive Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+
+            <TableRow android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp"  android:layout_marginBottom="20dp">
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_famInternal" android:layout_weight=".5" android:layout_marginRight="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_famInternal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="(IUD) Internal Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/facility_til_famPostpartum" android:layout_weight=".5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                    <EditText
+                        android:id="@+id/facility_famPostpartum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="(IUD) Postpartum Cost"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:padding="5dp"  />
+                </com.google.android.material.textfield.TextInputLayout>
+            </TableRow>
+        </TableLayout>
+
+
+        <Button
+            android:id="@+id/facilityBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorAccent"
+            android:text="Update"
+            android:textColor="#fff" />
+    </LinearLayout>
+</ScrollView>

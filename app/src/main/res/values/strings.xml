@@ -1,0 +1,372 @@
+<resources>
+    <string name="app_name">PHA Check-App</string>
+    <!--<string name="app_name">PHA Dummy</string>-->
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string-array name="educational_attainment_value">
+        <item>non</item>
+        <item>elem</item>
+        <item>elem_grad</item>
+        <item>high</item>
+        <item>high_grad</item>
+        <item>college</item>
+        <item>college_grad</item>
+        <item>vocational</item>
+        <item>master</item>
+        <item>doctorate</item>
+    </string-array>
+
+    <string-array name="educational_attainment">
+        <item>No Education</item>
+        <item>Elementary Level</item>
+        <item>Elementary Graduate</item>
+        <item>HighSchool Level</item>
+        <item>HighSchool Graduate</item>
+        <item>College Level</item>
+        <item>College Graduate</item>
+        <item>Vocational Course</item>
+        <item>Masteral Degree</item>
+        <item>Doctorate Degree</item>
+    </string-array>
+
+    <string-array name="yes_no">
+        <item>YES</item>
+        <item>NO</item>
+    </string-array>
+
+    <string-array name="relation_to_head">
+        <item>Son</item>
+        <item>Daughter</item>
+        <item>Husband</item>
+        <item>Wife</item>
+        <item>Father</item>
+        <item>Mother</item>
+        <item>Brother</item>
+        <item>Sister</item>
+        <item>Nephew</item>
+        <item>Niece</item>
+        <item>Grandfather</item>
+        <item>Grandmother</item>
+        <item>Grandson</item>
+        <item>Granddaughter</item>
+        <item>Cousin</item>
+        <item>Relative</item>
+        <item>Granddaughter</item>
+        <item>Daughter in Law</item>
+        <item>Son in Law</item>
+        <item>Sister in Law</item>
+        <item>Brother in Law</item>
+        <item>Father in Law</item>
+        <item>Mother in Law</item>
+        <item>Live-in Partner</item>
+        <item>Deceased</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="suffix">
+        <item>Jr.</item>
+        <item>Sr.</item>
+        <item>I</item>
+        <item>II</item>
+        <item>III</item>
+    </string-array>
+
+    <string-array name="sex">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="medication_availment">
+        <item>Clear Choice</item>
+        <item>Medication Avail</item>
+        <item>No Medication Avail</item>
+    </string-array>
+
+    <string-array name="facility_availment">
+        <item>BHS</item>
+        <item>RHU</item>
+        <item>Public Hospital</item>
+        <item>Private Clinic</item>
+        <item>Private Hospital</item>
+        <item>Personal Expenses</item>
+    </string-array>
+
+
+    <string-array name="monthly_income">
+        <item value="1">Less Than 7,890</item>
+        <item>Between 7,890 to 15,780</item>
+        <item>Between 15,780 to 31,560</item>
+        <item>Between 31,560 to 78,900</item>
+        <item>Between 78,900 to 118,350</item>
+        <item>Between 118,350 to 157,800</item>
+        <item>At least 157,800</item>
+    </string-array>
+
+    <string-array name="unmet_needs">
+        <item>Option 1\nWomen of Reproductive Age who wants to limit/space but no access to Family Planning Method.</item>
+        <item>Option 2\nCouples and individuals who are fecund and sexually active and report not wanting any more children or wanting to delay the next pregnancy but are not using any Family Planning Method.</item>
+        <item>Option 3\nCurrently using Family Planning Method but in inappropriate way thus leading to pregnancy.</item>
+        <item>Option 4\nWomen of reproductive age not sexually active</item>
+    </string-array>
+
+    <string-array name="water_supply">
+        <item>Level 1\nFarthest user is not more than 250m from point source</item>
+        <item>Level 2\nFarthest user is not more than 25m from communal faucet</item>
+        <item>Level 3\nIt has service connection from system.</item>
+        <item>none of the above</item>
+    </string-array>
+
+    <string-array name="sanitary_toilet">
+        <item>None</item>
+        <item>Communal</item>
+        <item>Individual Household</item>
+    </string-array>
+
+    <string-array name="phic_status">
+        <item>Member</item>
+        <item>Dependent</item>
+        <item>Non-Member</item>
+    </string-array>
+
+    <string-array name="phic_type">
+        <item>Lifetime</item>
+        <item>Sponsored</item>
+        <item>Employed</item>
+    </string-array>
+
+    <string-array name="phic_sponsored">
+        <item>DOH</item>
+        <item>PLGU</item>
+        <item>MLGU</item>
+        <item>Private</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="phic_employment">
+        <item>Government</item>
+        <item>Private</item>
+        <item>Self-Employed</item>
+    </string-array>
+
+    <string-array name="personal_smoking">
+        <item>Never Smoked</item>
+        <item>Current Smoker</item>
+        <item>Former Smoker</item>
+        <item>Secondhand Smoker</item>
+        <item>Thirdhand Smoker</item>
+    </string-array>
+
+    <string-array name="vaccine_received">
+        <item>School</item>
+        <item>Health Center/Community</item>
+        <item>Priv. MD</item>
+    </string-array>
+
+    <string-array name="physical_status">
+        <item>Oriented to Time, Place, and Date</item>
+        <item>Concious</item>
+        <item>Ambulatory</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="physical_skin">
+        <item>Good Skin Turgor</item>
+        <item>Pallor</item>
+        <item>Jaundice</item>
+        <item>Rashes</item>
+        <item>Lesions</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="religion">
+        <item>RC</item>
+        <item>Christian</item>
+        <item>INC</item>
+        <item>Islam</item>
+        <item>Jehovah</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="procedure_diagnostic_result">
+        <item>IgG Positive</item>
+        <item>IgG Negative</item>
+        <item>IgM Positive</item>
+        <item>IgM Negative</item>
+    </string-array>
+
+    <string-array name="civil_status">
+        <item>Single</item>
+        <item>Married</item>
+        <item>Divorced</item>
+        <item>Separated</item>
+        <item>Widowed</item>
+    </string-array>
+
+    <string-array name="nutrition">
+        <item>Deworming</item>
+        <item>Vitamin A Supplement</item>
+    </string-array>
+
+    <string-array name="immunization">
+        <item>BCG</item>
+        <item>HEP B</item>
+        <item>Penta 1</item>
+        <item>Penta 2</item>
+        <item>Penta 3</item>
+        <item>OPV 1</item>
+        <item>OPV 2</item>
+        <item>OPV 3</item>
+        <item>IPV 1</item>
+        <item>IPV 2</item>
+        <item>MMR 1</item>
+        <item>MMR 2</item>
+    </string-array>
+
+    <string-array name="service_capability">
+        <item>Level 1</item>
+        <item>Level 2</item>
+        <item>Level 3</item>
+        <item>Laboratory Level 1</item>
+        <item>Laboratory Level 2</item>
+        <item>Laboratory Level 3</item>
+        <item>Infirmary</item>
+        <item>Primary Care Facility</item>
+        <item>ITMF</item>
+        <item>Dental Clinic</item>
+        <item>Radiology</item>
+        <item>Pharmacy</item>
+    </string-array>
+
+    <string-array name="ownership">
+        <item>Government</item>
+        <item>(Government) Rural Health Unit</item>
+        <item>(Government) LGU-Owned Hospital</item>
+        <item>(Government) City-Owned Hospital</item>
+        <item>(Government) City Health Office</item>
+        <item>Government Birthing Home</item>
+        <item>Emergency Operations Center</item>
+        <item>DOH Hospital</item>
+        <item>CIU/TTMF</item>
+        <item>Department of National Defense</item>
+        <item>Philippine National Police</item>
+        <item>Private</item>
+        <item>Private Birthing Home</item>
+    </string-array>
+
+    <string-array name="transport_type">
+        <item>Level 1 Licensed Ambulance</item>
+        <item>Level 2 Licensed Ambulance</item>
+        <item>Level 3 Licensed Ambulance</item>
+        <item>ER Transport Vehicle</item>
+    </string-array>
+
+
+    <string-array name="referral_status">
+        <item>Active</item>
+        <item>Inactive</item>
+    </string-array>
+
+    <string-array name="facility_status">
+        <item>Functional</item>
+        <item>Not Functional</item>
+    </string-array>
+
+    <string-array name="classification">
+        <item>Private</item>
+        <item>Public</item>
+    </string-array>
+
+    <string-array name="weekdays">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+
+    <string-array name="accreditation_status">
+        <item>Accredited</item>
+        <item>Non-Accredited</item>
+    </string-array>
+
+    <string-array name="license_status">
+        <item>Licensed</item>
+        <item>Unlicensed</item>
+    </string-array>
+
+    <string-array name="laboratory_services">
+        <item>Chest X-ray</item>
+        <item>Complete Blood Count w/ Platelet Count</item>
+        <item>Creatinine</item>
+        <item>ECG</item>
+        <item>FBS</item>
+        <item>Fecalysis</item>
+        <item>Fecal Occult Blood</item>
+        <item>HbAIC</item>
+        <item>Lipid profile</item>
+        <item>Oral Glucose Tolerance Test</item>
+        <item>Pap Smear</item>
+        <item>Sputum Microscopy</item>
+        <item>Urinalysis</item>
+    </string-array>
+
+    <string-array name="dental_services">
+        <item>Extraction</item>
+        <item>Temporary Filling</item>
+        <item>Permanent Filling</item>
+        <item>Orthodontics</item>
+        <item>Oral Prophylaxis (Cleaning)</item>
+    </string-array>
+
+    <string-array name="familyPlanning_services">
+        <item>NSV</item>
+        <item>BTL</item>
+        <item>Condom</item>
+        <item>LAM</item>
+        <item>Progesterone</item>
+        <item>Implant</item>
+        <item>(Oral Pills) Progesterone Only</item>
+        <item>(Oral Pills) Combined Oral Contraceptives</item>
+        <item>(DMPA) Pure Inject Contraceptives</item>
+        <item>(DMPA) Combined Inject Contraceptives</item>
+        <item>(IUD) Internal</item>
+        <item>(IUD) Postpartum</item>
+    </string-array>
+
+    <string-array name="abtc_services">
+        <item>Category 1</item>
+        <item>Category 2</item>
+        <item>Category 3</item>
+    </string-array>
+
+    <string-array name="tbdots_services">
+        <item>Category 1</item>
+        <item>Category 2</item>
+    </string-array>
+
+    <string-array name="consultation_services">
+        <item>Private Clinic</item>
+        <item>Public Clinic</item>
+    </string-array>
+
+    <string-array name="other_services">
+        <item>Birthing</item>
+        <item>Dialysis Center</item>
+        <item>Pharmacy</item>
+    </string-array>
+
+    <string-array name="covid_vaccine">
+        <item>None</item>
+        <item>Primary Dose</item>
+        <item>Second Dose</item>
+        <item>Booster Dose</item>
+    </string-array>
+
+
+</resources>

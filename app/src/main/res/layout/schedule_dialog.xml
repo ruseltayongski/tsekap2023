@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <TableRow android:layout_marginTop="5dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp">
+        <Spinner android:id="@+id/sched_dayFrom" android:layout_weight=".45" android:layout_height="wrap_content" android:layout_width="0dp" />
+        <TextView android:text="TO" android:textColor="#000" android:textStyle="bold" android:gravity="center" android:layout_weight=".1" android:layout_height="wrap_content" android:layout_width="0dp"/>
+        <Spinner android:id="@+id/sched_dayTo"  android:layout_weight=".45" android:layout_height="wrap_content" android:layout_width="0dp" />
+    </TableRow>
+
+    <TableRow  android:layout_marginTop="10dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp">
+
+        <EditText android:id="@+id/sched_timeFrom" android:layout_weight=".45" android:layout_height="wrap_content" android:layout_width="0dp" />
+        <TextView android:text="TO" android:textColor="#000" android:textStyle="bold" android:gravity="center" android:layout_weight=".1" android:layout_height="wrap_content" android:layout_width="0dp"/>
+        <EditText android:id="@+id/sched_timeTo"  android:layout_weight=".45" android:layout_height="wrap_content" android:layout_width="0dp" />
+    </TableRow>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+           <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+
+               <TableRow android:layout_marginTop="10dp"  android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp">
+                   <com.google.android.material.textfield.TextInputLayout android:layout_weight=".5" android:layout_marginRight="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                       <EditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:background="@android:color/transparent"
+                           android:hint="FROM (DAY)"
+                           android:text="Monday"
+                           android:padding="5dp"  />
+                   </com.google.android.material.textfield.TextInputLayout>
+                   <com.google.android.material.textfield.TextInputLayout android:layout_weight=".5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                       <EditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:background="@android:color/transparent"
+                           android:hint="TO (DAY):"
+                           android:text="Friday"
+                           android:padding="5dp"  />
+                   </com.google.android.material.textfield.TextInputLayout>
+               </TableRow>
+
+               <TableRow android:layout_marginTop="2dp"  android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp">
+                   <com.google.android.material.textfield.TextInputLayout android:layout_weight=".5" android:layout_marginRight="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                       <EditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:background="@android:color/transparent"
+                           android:hint="FROM (TIME)"
+                           android:text="08:00:00"
+                           android:padding="5dp"  />
+                   </com.google.android.material.textfield.TextInputLayout>
+                   <com.google.android.material.textfield.TextInputLayout android:layout_weight=".5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                       <EditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:background="@android:color/transparent"
+                           android:hint="TO (TIME):"
+                           android:text="17:00:00"
+                           android:padding="5dp"  />
+                   </com.google.android.material.textfield.TextInputLayout>
+               </TableRow>
+
+
+               <TableRow android:layout_marginTop="2dp"  android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="0dp">
+                   <com.google.android.material.textfield.TextInputLayout android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:background="@drawable/rounded_edittext" android:padding="5dp">
+                       <EditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:background="@android:color/transparent"
+                           android:hint="Other Notes regarding the Schedule"
+                           android:text="Saturday Sunday; Closed"
+                           android:padding="5dp"  />
+                   </com.google.android.material.textfield.TextInputLayout>
+               </TableRow>
+           </TableLayout>
+
+        </ScrollView>
+
+
+    <Button
+        android:id="@+id/optionBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:background="@color/colorAccent"
+        android:text="Confirm"
+        android:textColor="#fff" />
+</LinearLayout>

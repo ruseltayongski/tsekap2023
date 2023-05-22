@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/vaccine_toggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:padding="10dp"
+            android:text="Vaccination History"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#fff" />
+
+        <LinearLayout
+            android:id="@+id/vaccine_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vaccine/s Received"
+                android:textColor="@color/colorPrimary" />
+
+            <com.example.mvopo.tsekapp.Helper.CheckBoxGroup
+                android:id="@+id/vaccine_options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="1"
+                android:orientation="vertical"
+                android:stretchMode="columnWidth">
+
+                <CheckBox
+                    android:id="@+id/vaccine_mr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MR" />
+
+                <CheckBox
+                    android:id="@+id/vaccine_diphteria"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Diphteria" />
+
+                <CheckBox
+                    android:id="@+id/vaccine_mmr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MMR" />
+
+                <CheckBox
+                    android:id="@+id/vaccine_hpv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="HPV" />
+
+                <CheckBox
+                    android:id="@+id/vaccine_tetanus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tetanus Toxiod" />
+
+                <CheckBox
+                    android:id="@+id/vaccine_others"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Others" />
+
+            </com.example.mvopo.tsekapp.Helper.CheckBoxGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_edittext"
+                android:padding="5dp">
+
+                <EditText
+                    android:id="@+id/vaccine_doses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="No. of Doses"
+                    android:inputType="number"
+                    android:padding="5dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/vaccine_female_opt_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:padding="5dp">
+
+                    <EditText
+                        android:id="@+id/vaccine_ferrous_sulfate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:focusable="false"
+                        android:hint="Given ferrous sulfate?"
+                        android:padding="5dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:padding="5dp">
+
+                    <EditText
+                        android:id="@+id/vaccine_oil_capsule"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:focusable="false"
+                        android:hint="Given iodized oil capsule?"
+                        android:padding="5dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_edittext"
+                android:padding="5dp">
+
+                <EditText
+                    android:id="@+id/vaccine_deworm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="Dewormed?"
+                    android:focusable="false"
+                    android:padding="5dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/vaccine_dengvaxia_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#1565c0"
+                android:text="Add Dengvaxia History"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
