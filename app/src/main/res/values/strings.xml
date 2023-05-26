@@ -368,5 +368,25 @@
         <item>Booster Dose</item>
     </string-array>
 
+    <string-array name="family_planning_methods">
+        <item>COC</item>
+        <item>POP</item>
+        <item>Injectibles</item>
+        <item>IUD</item>
+        <item>Condom</item>
+        <item>LAM</item>
+        <item>BTL</item>
+        <item>Implant</item>
+        <item>SDM</item>
+        <item>DPT</item>
+        <item>Withdrawal</item>
+        <item>Others (Specify)</item>
+    </string-array>
+
+    <string-array name="family_planning_status">
+        <item>Withdrawal</item>
+        <item>New Acceptors</item>
+        <item>Others (Specify)</item>
+    </string-array>
 
 </resources>
