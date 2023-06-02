@@ -19,68 +19,73 @@ public class FamilyProfile implements Parcelable {
     //Update r
     public String birth_place, civil_status, religion, other_religion, contact, height, weight, cancer, cancer_type,
              covid_status, menarche, menarche_age, newborn_screen, newborn_text, deceased, deceased_date,
-            immu_stat, nutri_stat, pwd_desc, sexually_active, ip, four_ps, balik_probinsya, member_others;
+            immu_stat, nutri_stat, pwd_desc, sexually_active, ip, four_ps, balik_probinsya, member_others, health_group,
+            philhealth_categ, other_med_history, fam_plan, fam_plan_method, fam_plan_other_method,
+            fam_plan_status, fam_plan_other_status, household_num, fourps_num;
 
-    public FamilyProfile(String id, String uniqueId, String familyId, String philId, String nhts, String four_ps, String ip, String isHead,
-                         String relation, String member_others, String fname, String lname, String mname, String suffix, String dob, String sex,
-                         String barangayId, String muncityId, String provinceId, String income, String unmetNeed, String waterSupply,
-                         String sanitaryToilet, String educationalAttainment, String balik_probinsya, String status ,  String pwd, String pregnant,
-                         String birth_place, String civil_status, String religion, String other_religion, String contact, String height, String weight, String cancer,
-                         String cancer_type,  String covid_status, String menarche, String menarche_age, String newborn_screen,
-                         String newborn_text, String deceased, String deceased_date, String immu_stat, String nutri_stat, String pwd_desc, String sexually_active) {
+    public FamilyProfile(String id, String uniqueId, String familyId, String household_num, String philhealth_categ, String philId, String nhts, String four_ps, String fourps_num,
+                         String ip, String isHead, String relation, String member_others, String fname, String mname, String lname, String suffix, String contact, String dob,
+                         String birth_place, String sex, String barangayId, String muncityId, String provinceId, String height, String weight, String civil_status, String religion,
+                         String other_religion, String income, String waterSupply, String sanitaryToilet, String educationalAttainment, String balik_probinsya, String health_group,
+                         String cancer, String cancer_type, String status, String newborn_screen, String newborn_text, String deceased, String deceased_date, String other_med_history,
+                         String covid_status, String menarche, String menarche_age, String sexually_active, String fam_plan, String fam_plan_method, String fam_plan_other_method,
+                         String fam_plan_status, String fam_plan_other_status, String unmetNeed, String pregnant, String pwd, String pwd_desc){
         this.id = id;
         this.uniqueId = uniqueId;
         this.familyId = familyId;
+        this.household_num = household_num;
+        this.philhealth_categ = philhealth_categ;
         this.philId = philId;
         this.nhts = nhts;
         this.four_ps = four_ps;
+        this.fourps_num = fourps_num;
         this.ip = ip;
-
         this.isHead = isHead;
         this.relation = relation;
         this.member_others = member_others;
         this.fname = fname;
-        this.lname = lname;
         this.mname = mname;
+        this.lname = lname;
         this.suffix = suffix;
+        this.contact = contact;
         this.dob = dob;
+        this.birth_place = birth_place;
         this.sex = sex;
         this.barangayId = barangayId;
         this.muncityId = muncityId;
         this.provinceId = provinceId;
+        this.height = height;
+        this.weight = weight;
+        this.civil_status=civil_status;
+        this.religion = religion;
+        this.other_religion = other_religion;
         this.income = income;
-        this.unmetNeed = unmetNeed;
         this.waterSupply = waterSupply;
         this.sanitaryToilet = sanitaryToilet;
         this.educationalAttainment = educationalAttainment;
         this.balik_probinsya = balik_probinsya;
-        this.status = status;
-
-        // UPDATE
-        this.pwd = pwd;
-        this.pregnant = pregnant;
-
-        //Update R
-        this.birth_place = birth_place;
-        this.civil_status = civil_status;
-        this.religion = religion;
-        this.other_religion = other_religion;
-        this.contact = contact;
-        this.height = height;
-        this.weight = weight;
+        this.health_group = health_group;
         this.cancer = cancer;
         this.cancer_type = cancer_type;
-        this.covid_status = covid_status;
-        this.menarche = menarche;
-        this.menarche_age = menarche_age;
+        this.status = status;
         this.newborn_screen = newborn_screen;
         this.newborn_text = newborn_text;
         this.deceased = deceased;
         this.deceased_date = deceased_date;
-        this.immu_stat = immu_stat;
-        this.nutri_stat = nutri_stat;
-        this.pwd_desc = pwd_desc;
+        this.other_med_history = other_med_history;
+        this.covid_status = covid_status;
+        this.menarche = menarche;
+        this.menarche_age = menarche_age;
         this.sexually_active = sexually_active;
+        this.fam_plan = fam_plan;
+        this.fam_plan_method = fam_plan_method;
+        this.fam_plan_other_method = fam_plan_other_method;
+        this.fam_plan_status = fam_plan_status;
+        this.fam_plan_other_status = fam_plan_other_status;
+        this.unmetNeed = unmetNeed;
+        this.pwd = pwd;
+        this.pregnant = pregnant;
+        this.pwd_desc = pwd_desc;
     }
 
     protected FamilyProfile(Parcel in) {

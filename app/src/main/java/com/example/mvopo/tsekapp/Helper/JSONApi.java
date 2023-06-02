@@ -327,9 +327,12 @@ public class JSONApi {
                                         String id = response.getString("id");
                                         String unique_id = response.getString("unique_id");
                                         String familyID = response.getString("familyID");
+                                        String householdNum = response.getString("household_num");
+                                        String philhealth_categ = response.getString("philhealth_categ");
                                         String phicID = response.getString("phicID");
                                         String nhts = response.getString("nhts");
                                         String four_ps = response.getString("four_ps");
+                                        String fourPsNumber = response.getString("fourps_num");
                                         String ip = response.getString("ip");
 
                                         String head = response.getString("head");
@@ -379,12 +382,22 @@ public class JSONApi {
                                         String nutri_stat = response.getString("nutri_stat");
                                         String pwd_desc = response.getString("pwd_desc");
                                         String sexually_active = response.getString("sexually_active");
+                                        String age_class = response.getString("health_group");
+                                        String other_med_history = response.getString("other_med_history");
+                                        String familyPlanning = response.getString("fam_plan");
+                                        String familyPlanningMethod = response.getString("fam_plan_method");
+                                        String familyPlanningOtherMethod = response.getString("fam_plan_other_method");
+                                        String familyPlanningStatus = response.getString("fam_plan_status");
+                                        String familyPlanningOtherStatus = response.getString("fam_plan_other_status");
 
-                                        db.addProfile(new FamilyProfile(id, unique_id, familyID, phicID, nhts, four_ps, ip, head, relation, member_others, fname, lname, mname, suffix, dob, sex,
-                                                barangay_id, muncity_id, province_id, income, unmet, water, toilet, education, balik_probinsya, "0", pwd,
-                                                pregnant, birth_place, civil_status, religion, other_religion, contact, height, weight, cancer, cancer_type,
-                                                covid_status, menarche, menarche_age, newborn_screen, newborn_text, deceased, deceased_date,
-                                                immu_stat, nutri_stat, pwd_desc, sexually_active));
+                                        db.addProfile(new FamilyProfile(id, unique_id, familyID, householdNum, philhealth_categ, phicID, nhts, four_ps, fourPsNumber,
+                                                ip, head, relation, fname, member_others, mname, lname, suffix, contact, dob,
+                                                birth_place, sex, barangay_id, muncity_id, balik_probinsya, height, weight, civil_status, religion,
+                                                other_religion, income, water, toilet, education,
+                                                balik_probinsya, age_class, cancer, cancer_type, "0", newborn_screen,
+                                                newborn_text, deceased, deceased_date, other_med_history, covid_status, menarche,
+                                                menarche_age, sexually_active, familyPlanning, familyPlanningMethod, familyPlanningOtherMethod, familyPlanningStatus,
+                                                familyPlanningOtherStatus, unmet, pregnant, pwd, pwd_desc));
 
                                         //Saving list of medication
 

@@ -63,12 +63,15 @@ public class Constants {
 
         JSONObject request = new JSONObject();
         JSONObject data = new JSONObject();
-       try {
+        try {
             data.accumulate("unique_id", profile.uniqueId);
             data.accumulate("familyID", profile.familyId);
+            data.accumulate("household_num", profile.household_num);
+            data.accumulate("philhealth_categ", profile.philhealth_categ);
             data.accumulate("phicID", profile.philId);
             data.accumulate("nhts", profile.nhts);
             data.accumulate("four_ps", profile.four_ps);
+            data.accumulate("fourps_num", profile.fourps_num);
             data.accumulate("ip", profile.ip);
             data.accumulate("head", profile.isHead);
             data.accumulate("relation", profile.relation);
@@ -77,8 +80,8 @@ public class Constants {
             data.accumulate("mname", profile.mname);
             data.accumulate("lname", profile.lname);
             data.accumulate("suffix", profile.suffix);
-            data.accumulate("sex", profile.sex);
             data.accumulate("dob", profile.dob);
+            data.accumulate("sex", profile.sex);
             data.accumulate("barangay_id", profile.barangayId);
             data.accumulate("muncity_id", profile.muncityId);
             data.accumulate("province_id", profile.provinceId);
@@ -87,15 +90,7 @@ public class Constants {
             data.accumulate("water", profile.waterSupply);
             data.accumulate("user_id", MainActivity.user.id);
 
-            String toilet = profile.sanitaryToilet;
-
-            if(!toilet.isEmpty()) {
-                if(toilet.equals("1")) toilet = "non";
-                else if(toilet.equals("2")) toilet = "comm";
-                else if(toilet.equals("3")) toilet = "indi";
-            }
-
-            data.accumulate("toilet",toilet);
+            data.accumulate("toilet", profile.sanitaryToilet);
             data.accumulate("education", profile.educationalAttainment);
             data.accumulate("balik_probinsya", profile.balik_probinsya);
             data.accumulate("pwd", profile.pwd);
