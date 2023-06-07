@@ -144,12 +144,12 @@
 
     <string-array name="sanitary_toilet_value">
         <item>non</item>
-        <item>flush_septic</item>
-        <item>flush_sewage</item>
-        <item>latrine_compost</item>
+        <item>septic</item>
+        <item>sewage</item>
+        <item>compost</item>
         <item>open_drain</item>
-        <item>overhung_latrine</item>
-        <item>openpit_latrine</item>
+        <item>overhung_l</item>
+        <item>open_l</item>
     </string-array>
 
     <string-array name="sanitary_toilet">

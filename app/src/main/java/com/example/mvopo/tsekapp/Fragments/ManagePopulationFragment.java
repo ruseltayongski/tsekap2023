@@ -119,7 +119,7 @@ public class ManagePopulationFragment extends Fragment implements View.OnClickLi
     ageGroupArray, ageGroupValueArray, familyPlanningStatusArray, familyPlanningStatusValueArray ;
     int age = 0;
     boolean brgyFieldClicked = false;
-    boolean toUpdate, addHead;
+    boolean toUpdate, addHead, isHead;
 
 
     String males = "Son, Husband, Father, Brother, Nephew, Grandfather, Grandson, Son in Law, Brother in Law, Father in Law";
@@ -141,6 +141,7 @@ public class ManagePopulationFragment extends Fragment implements View.OnClickLi
 
         toUpdate = getArguments().getBoolean("toUpdate");
         addHead = getArguments().getBoolean("addHead");
+        isHead = getArguments().getBoolean("isHead");
         familyProfile = getArguments().getParcelable("familyProfile");
         if(familyProfile!=null)
         profileMedicationsList = MainActivity.db.getProfileMedications(familyProfile.uniqueId);
@@ -187,11 +188,14 @@ public class ManagePopulationFragment extends Fragment implements View.OnClickLi
             txtHead.setOnClickListener(this);
             txtHead.setText("NO");
             til_relation.setVisibility(View.VISIBLE);
-            txtIncome.setVisibility(View.GONE);
-            txtSupply.setVisibility(View.GONE);
             til_income.setVisibility(View.GONE);
             til_supply.setVisibility(View.GONE);
             til_toilet.setVisibility(View.GONE);
+            if(isHead == true){
+                til_income.setVisibility(View.VISIBLE);
+                til_supply.setVisibility(View.VISIBLE);
+                til_toilet.setVisibility(View.VISIBLE);
+            }
         }
         else {
             txtHead.setText("YES");
@@ -750,7 +754,6 @@ public class ManagePopulationFragment extends Fragment implements View.OnClickLi
             public void afterTextChanged(Editable s) {
                 txtFamilyPlanningStatusOther.setText("");
                 if(txtFamilyPlanningStatus.getText().toString().trim().equalsIgnoreCase("Others (Specify)")){
-                    System.out.println(txtFamilyPlanningStatusOther.getText().toString().trim());
                     til_familyPlanningStatusOther.setVisibility(View.VISIBLE);
                     txtFamilyPlanningStatusOther.setHint("(Other Family Planning Status)");
                 }
@@ -1065,7 +1068,6 @@ public class ManagePopulationFragment extends Fragment implements View.OnClickLi
                     income="0";
                     supply="0";
                     toilet="";
-                    System.out.println("Passed if head checked");
                 }else { //HEAD
                     relation="Head"; member_others ="";
                     try { income = txtIncome.getTag().toString();
@@ -1087,7 +1089,6 @@ public class ManagePopulationFragment extends Fragment implements View.OnClickLi
                 age_class = mapValue(ageGroupArray, ageGroupValueArray, txtAgeClass.getText().toString().trim());
                 familyPlanningStatus = mapValue(familyPlanningStatusArray, familyPlanningStatusValueArray, txtFamilyPlanningStatus.getText().toString().trim());
 
-                System.out.println("Before checking missing fields");
                 if (!mental_med.isEmpty() && mental_remarks.isEmpty()) {
                     txtMentalRemarks.setError("Required");
                     txtMentalRemarks.requestFocus();
@@ -1144,23 +1145,25 @@ public class ManagePopulationFragment extends Fragment implements View.OnClickLi
                 } else if (toilet.isEmpty() && head.equalsIgnoreCase("yes")) {
                     txtToilet.setError("Required");
                     txtToilet.requestFocus();
+                } else if (covid_status.isEmpty()){
+                    txtCovid.setError("Required");
+                    txtCovid.requestFocus();
                 } else if (brgy.isEmpty())
                 {
                     Toast.makeText(getContext(), "Barangay required", Toast.LENGTH_SHORT).show();
                 } else { // filled out all required fields
-                    System.out.println("Inside if all required fields done");
                     if (brgyFieldClicked) brgy = txtBrgy.getTag().toString();
                     else brgy = familyProfile.barangayId;
 
                     //reading the rest of fields
                     famId = txtFamilyId.getText().toString().trim();
                     philId = txtPhilHealthId.getText().toString().trim();
-                    if (checkBoxNHTS.isChecked()) nhts = "YES";
-                    else nhts = "NO";
-                    if (checkBoxIP.isChecked()) ip = "YES";
-                    else ip = "NO";
-                    if (checkBox4p.isChecked()) fourPs = "YES";
-                    else fourPs = "NO";
+                    if (checkBoxNHTS.isChecked()) nhts = "yes";
+                    else nhts = "no";
+                    if (checkBoxIP.isChecked()) ip = "yes";
+                    else ip = "no";
+                    if (checkBox4p.isChecked()) fourPs = "yes";
+                    else fourPs = "no";
                     fourPsNumber = txtManageFourPNumber.getText().toString().trim();
                     balik_probinsya = txtBalikProbinsya.getText().toString().trim();
                     birth_place = txtBirthPlace.getText().toString().trim();
@@ -1169,11 +1172,11 @@ public class ManagePopulationFragment extends Fragment implements View.OnClickLi
                     weight = txtWeight.getText().toString().trim();
 
                     cancer = txtCancer.getText().toString().trim();
-                    if(cancer.trim().equalsIgnoreCase("NO")) cancer_type = "";
+                    if(cancer.trim().equalsIgnoreCase("no")) cancer_type = "";
                     else cancer_type = txtCancerType.getText().toString().trim();
 
                     pwd = txtPWD.getText().toString().trim();
-                    if(pwd.trim().equalsIgnoreCase("NO")) pwd_desc = "";
+                    if(pwd.trim().equalsIgnoreCase("no")) pwd_desc = "";
                     else pwd_desc = txtPwdDesc.getText().toString().trim();
 
                     // Female inputs
@@ -1236,11 +1239,11 @@ public class ManagePopulationFragment extends Fragment implements View.OnClickLi
 
                     if (toUpdate){
                         deceased = txtDecease.getText().toString().trim();
-                        if(deceased.trim().equalsIgnoreCase("NO")) deceased_date = "";
+                        if(deceased.trim().equalsIgnoreCase("NO") || deceased.isEmpty()) deceased_date = "0000-00-00";
                         else deceased_date = txtDeceasedDate.getText().toString().trim();
                     } else{
                         deceased = txtDecease.getText().toString().trim();
-                        deceased_date = "";
+                        deceased_date = "0000-00-00";
                     }
 
 
@@ -1365,9 +1368,9 @@ public class ManagePopulationFragment extends Fragment implements View.OnClickLi
         txtSexually.setText(familyProfile.sexually_active);
 
         if(familyProfile.pregnant.isEmpty() || familyProfile.pregnant.equalsIgnoreCase("0000-00-00")){
-            txtIsPregnant.setText("NO");
+            txtIsPregnant.setText("no");
         } else {
-            txtIsPregnant.setText("YES");
+            txtIsPregnant.setText("yes");
             txtPregnantDate.setText(familyProfile.pregnant);
         }
 

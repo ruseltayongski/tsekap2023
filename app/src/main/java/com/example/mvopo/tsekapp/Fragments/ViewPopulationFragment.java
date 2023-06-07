@@ -132,6 +132,7 @@ public class ViewPopulationFragment extends Fragment {
 
                         bundle.putBoolean("toUpdate", true);
                         bundle.putBoolean("addHead", false);
+                        if (familyProfiles.get(position).isHead.equalsIgnoreCase("Yes")) bundle.putBoolean("isHead", true);
                         mpf.setArguments(bundle);
                         MainActivity.ft = MainActivity.fm.beginTransaction();
                         MainActivity.ft.replace(R.id.fragment_container, mpf).addToBackStack("").commit();

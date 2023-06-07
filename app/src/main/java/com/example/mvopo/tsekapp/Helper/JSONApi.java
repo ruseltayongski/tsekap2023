@@ -352,7 +352,7 @@ public class JSONApi {
                                         String water = response.getString("water");
                                         String toilet = response.getString("toilet");
                                         String education = response.getString("education");
-                                        String balik_probinsya =  response.getString("balik_probinsya");
+                                        String balik_probinsya = response.getString("balik_probinsya");
 
                                         String pwd = response.getString("pwd");
                                         String pregnant = response.getString("pregnant");
@@ -378,8 +378,6 @@ public class JSONApi {
                                         String newborn_text = response.getString("newborn_text");
                                         String deceased = response.getString("deceased");
                                         String deceased_date = response.getString("deceased_date");
-                                        String immu_stat = response.getString("immu_stat");
-                                        String nutri_stat = response.getString("nutri_stat");
                                         String pwd_desc = response.getString("pwd_desc");
                                         String sexually_active = response.getString("sexually_active");
                                         String age_class = response.getString("health_group");
@@ -391,8 +389,8 @@ public class JSONApi {
                                         String familyPlanningOtherStatus = response.getString("fam_plan_other_status");
 
                                         db.addProfile(new FamilyProfile(id, unique_id, familyID, householdNum, philhealth_categ, phicID, nhts, four_ps, fourPsNumber,
-                                                ip, head, relation, fname, member_others, mname, lname, suffix, contact, dob,
-                                                birth_place, sex, barangay_id, muncity_id, balik_probinsya, height, weight, civil_status, religion,
+                                                ip, head, relation, member_others, fname, mname, lname, suffix, contact, dob,
+                                                birth_place, sex, barangay_id, muncity_id, province_id, height, weight, civil_status, religion,
                                                 other_religion, income, water, toilet, education,
                                                 balik_probinsya, age_class, cancer, cancer_type, "0", newborn_screen,
                                                 newborn_text, deceased, deceased_date, other_med_history, covid_status, menarche,
