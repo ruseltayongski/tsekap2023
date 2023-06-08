@@ -4,7 +4,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion '30.0.2'
     defaultConfig {
-        applicationId "com.example.mvopo.tsekapp" 
+        applicationId "com.example.mvopo.tsekapp"
         minSdkVersion 16
         targetSdkVersion 29
         versionCode 11
@@ -15,6 +15,11 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    testOptions {
+        unitTests.all {
+            useJUnitPlatform()
         }
     }
 }
@@ -41,6 +46,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:11.8.0'
     implementation 'com.github.wooplr:Spotlight:1.2.3'
     implementation 'com.theartofdev.edmodo:android-image-cropper:2.5.+'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 }
-
 apply plugin: 'com.google.gms.google-services'
