@@ -32,7 +32,7 @@ import java.util.concurrent.TimeUnit;
 public class Constants {
 
 //    public static String url = "http://203.177.67.126/tsekap/vii/api?";
-//    public static String apkUrl = "http://203.177.67.126/tsekap/vii/resources/apk/PHA%20Check-App.apk";
+    //    public static String apkUrl = "http://203.177.67.126/tsekap/vii/resources/apk/PHA%20Check-App.apk";
 
     public static String dengvaxiaUrl = "http://203.177.67.124/dengvaxia/api?";
     public static String dengvaxiaRegUrl = "http://192.168.101.59:8080/tsekap/vii/api/insertDengvaxia";
@@ -63,12 +63,15 @@ public class Constants {
 
         JSONObject request = new JSONObject();
         JSONObject data = new JSONObject();
-       try {
+        try {
             data.accumulate("unique_id", profile.uniqueId);
             data.accumulate("familyID", profile.familyId);
+            data.accumulate("household_num", profile.household_num);
+            data.accumulate("philhealth_categ", profile.philhealth_categ);
             data.accumulate("phicID", profile.philId);
             data.accumulate("nhts", profile.nhts);
             data.accumulate("four_ps", profile.four_ps);
+            data.accumulate("fourps_num", profile.fourps_num);
             data.accumulate("ip", profile.ip);
             data.accumulate("head", profile.isHead);
             data.accumulate("relation", profile.relation);
@@ -77,8 +80,8 @@ public class Constants {
             data.accumulate("mname", profile.mname);
             data.accumulate("lname", profile.lname);
             data.accumulate("suffix", profile.suffix);
-            data.accumulate("sex", profile.sex);
             data.accumulate("dob", profile.dob);
+            data.accumulate("sex", profile.sex);
             data.accumulate("barangay_id", profile.barangayId);
             data.accumulate("muncity_id", profile.muncityId);
             data.accumulate("province_id", profile.provinceId);
@@ -87,15 +90,7 @@ public class Constants {
             data.accumulate("water", profile.waterSupply);
             data.accumulate("user_id", MainActivity.user.id);
 
-            String toilet = profile.sanitaryToilet;
-
-            if(!toilet.isEmpty()) {
-                if(toilet.equals("1")) toilet = "non";
-                else if(toilet.equals("2")) toilet = "comm";
-                else if(toilet.equals("3")) toilet = "indi";
-            }
-
-            data.accumulate("toilet",toilet);
+            data.accumulate("toilet", profile.sanitaryToilet);
             data.accumulate("education", profile.educationalAttainment);
             data.accumulate("balik_probinsya", profile.balik_probinsya);
             data.accumulate("pwd", profile.pwd);
@@ -117,10 +112,15 @@ public class Constants {
             data.accumulate("newborn_text", profile.newborn_text);
             data.accumulate("deceased", profile.deceased);
             data.accumulate("deceased_date", profile.deceased_date);
-            data.accumulate("immu_stat", profile.immu_stat);
-            data.accumulate("nutri_stat", profile.nutri_stat);
+            data.accumulate("other_med_history", profile.other_med_history);
             data.accumulate("pwd_desc", profile.pwd_desc);
             data.accumulate("sexually_active", profile.sexually_active);
+            data.accumulate("health_group", profile.health_group);
+            data.accumulate("fam_plan", profile.fam_plan);
+            data.accumulate("fam_plan_method", profile.fam_plan_method);
+            data.accumulate("fam_plan_other_method", profile.fam_plan_other_method);
+            data.accumulate("fam_plan_status", profile.fam_plan_status);
+            data.accumulate("fam_plan_other_status", profile.fam_plan_other_status);
             //request.accumulate("data", data); //original end
             //request.accumulate("_token", MainActivity.user.token);
         } catch (JSONException e) {

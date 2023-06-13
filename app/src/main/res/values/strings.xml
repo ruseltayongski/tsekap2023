@@ -8,29 +8,43 @@
     <string name="action_settings">Settings</string>
 
     <string-array name="educational_attainment_value">
+        <item></item>
         <item>non</item>
+        <item>preschool</item>
         <item>elem</item>
+        <item>elem_undergrad</item>
         <item>elem_grad</item>
         <item>high</item>
+        <item>high_undergrad</item>
         <item>high_grad</item>
+        <item>senior_high</item>
+        <item>als</item>
         <item>college</item>
+        <item>college_undergrad</item>
         <item>college_grad</item>
+        <item>post_grad</item>
         <item>vocational</item>
-        <item>master</item>
-        <item>doctorate</item>
+        <item>unable_provide</item>
     </string-array>
 
     <string-array name="educational_attainment">
+        <item>Clear Choice</item>
         <item>No Education</item>
-        <item>Elementary Level</item>
+        <item>Preschool</item>
+        <item>Elementary Student</item>
+        <item>Elementary Undergraduate</item>
         <item>Elementary Graduate</item>
-        <item>HighSchool Level</item>
-        <item>HighSchool Graduate</item>
-        <item>College Level</item>
+        <item>High School Student</item>
+        <item>High School Undergraduate</item>
+        <item>High School Graduate</item>
+        <item>Senior High School</item>
+        <item>ALS</item>
+        <item>College Student</item>
+        <item>College Undergraduate</item>
         <item>College Graduate</item>
+        <item>Post Graduate/Masteral/Doctorate Degree</item>
         <item>Vocational Course</item>
-        <item>Masteral Degree</item>
-        <item>Doctorate Degree</item>
+        <item>Unable to provide</item>
     </string-array>
 
     <string-array name="yes_no">
@@ -39,32 +53,40 @@
     </string-array>
 
     <string-array name="relation_to_head">
+        <item>Spouse</item>
         <item>Son</item>
         <item>Daughter</item>
-        <item>Husband</item>
         <item>Wife</item>
+        <item>Husband</item>
+        <item>Sister</item>
+        <item>Brother</item>
         <item>Father</item>
         <item>Mother</item>
-        <item>Brother</item>
-        <item>Sister</item>
-        <item>Nephew</item>
-        <item>Niece</item>
         <item>Grandfather</item>
         <item>Grandmother</item>
+        <item>Auntie</item>
+        <item>Uncle</item>
+        <item>Brother in Law</item>
+        <item>Sister in Law</item>
+        <item>Father in Law</item>
+        <item>Mother in Law</item>
         <item>Grandson</item>
         <item>Granddaughter</item>
         <item>Cousin</item>
-        <item>Relative</item>
-        <item>Granddaughter</item>
         <item>Daughter in Law</item>
         <item>Son in Law</item>
-        <item>Sister in Law</item>
-        <item>Brother in Law</item>
-        <item>Father in Law</item>
-        <item>Mother in Law</item>
+        <item>Step-son</item>
+        <item>Step-daughter</item>
+        <item>Step-father</item>
+        <item>Step-mother</item>
+        <item>Step-sister</item>
+        <item>Step-brother</item>
+        <item>Nephew</item>
+        <item>Niece</item>
+        <item>Relative</item>
         <item>Live-in Partner</item>
         <item>Deceased</item>
-        <item>Others</item>
+        <item>Others (Specify)</item>
     </string-array>
 
     <string-array name="suffix">
@@ -120,10 +142,24 @@
         <item>none of the above</item>
     </string-array>
 
+    <string-array name="sanitary_toilet_value">
+        <item>non</item>
+        <item>septic</item>
+        <item>sewage</item>
+        <item>compost</item>
+        <item>open_drain</item>
+        <item>overhung_l</item>
+        <item>open_l</item>
+    </string-array>
+
     <string-array name="sanitary_toilet">
-        <item>None</item>
-        <item>Communal</item>
-        <item>Individual Household</item>
+        <item>None/Without Toilet</item>
+        <item>Pour/flush toilet connected to septic tank</item>
+        <item>Pour/flush toilet connected to septic tank AND to sewerage system</item>
+        <item>Ventilated improved pit latrine (VIP) or Composting toilet</item>
+        <item>Water-sealed connected to open drain</item>
+        <item>Overhung Latrine</item>
+        <item>Open-pit Latrine</item>
     </string-array>
 
     <string-array name="phic_status">
@@ -182,13 +218,44 @@
         <item>Others</item>
     </string-array>
 
-    <string-array name="religion">
+    <string-array name="religion_value">
         <item>RC</item>
         <item>Christian</item>
-        <item>INC</item>
+        <item>inc</item>
+        <item>Catholic</item>
         <item>Islam</item>
-        <item>Jehovah</item>
-        <item>Others</item>
+        <item>Baptist</item>
+        <item>born_again</item>
+        <item>Buddhism</item>
+        <item>cog</item>
+        <item>jehovas</item>
+        <item>Protestant</item>
+        <item>adventist</item>
+        <item>mormons</item>
+        <item>Evangelical</item>
+        <item>Pentecostal</item>
+        <item>Unknown</item>
+        <item>other</item>
+    </string-array>
+
+    <string-array name="religion">
+        <item>Roman Catholic</item>
+        <item>Christian</item>
+        <item>Iglesia ni Cristo</item>
+        <item>Catholic</item>
+        <item>Islam</item>
+        <item>Baptist</item>
+        <item>Born Again Christian</item>
+        <item>Buddhism</item>
+        <item>Church of God</item>
+        <item>Jehovah\'s Witness</item>
+        <item>Protestant</item>
+        <item>Seventh Day Adventist</item>
+        <item>LDS-Mormons</item>
+        <item>Evangelical</item>
+        <item>Pentecostal</item>
+        <item>Unknown</item>
+        <item>Others (Specify)</item>
     </string-array>
 
     <string-array name="procedure_diagnostic_result">
@@ -201,9 +268,10 @@
     <string-array name="civil_status">
         <item>Single</item>
         <item>Married</item>
-        <item>Divorced</item>
-        <item>Separated</item>
+        <item>Live-in</item>
         <item>Widowed</item>
+        <item>Cohabitation</item>
+        <item>Separated</item>
     </string-array>
 
     <string-array name="nutrition">
@@ -368,5 +436,65 @@
         <item>Booster Dose</item>
     </string-array>
 
+    <string-array name="family_planning_methods">
+        <item>COC</item>
+        <item>POP</item>
+        <item>Injectibles</item>
+        <item>IUD</item>
+        <item>Condom</item>
+        <item>LAM</item>
+        <item>BTL</item>
+        <item>Implant</item>
+        <item>SDM</item>
+        <item>DPT</item>
+        <item>Withdrawal</item>
+        <item>Others (Specify)</item>
+    </string-array>
+
+    <string-array name="family_planning_status">
+        <item>Withdrawal</item>
+        <item>New Acceptors</item>
+        <item>Others (Specify)</item>
+    </string-array>
+    
+    <string-array name="family_planning_status_value">
+        <item>withdrawal</item>
+        <item>new_acceptors</item>
+        <item>other</item>
+    </string-array>
+
+    <string-array name="philhealth_category">
+        <item>Clear Choice</item>
+        <item>Direct Contributors</item>
+        <item>Indirect Contributors</item>
+        <item>Unknown</item>
+    </string-array>
+
+    <string-array name="philhealth_category_value">
+        <item></item>
+        <item>direct</item>
+        <item>indirect</item>
+        <item>unknown</item>
+    </string-array>
+
+    <string-array name="age_group_array">
+        <item>Newborn</item>
+        <item>Infant</item>
+        <item>PSAC</item>
+        <item>School Age</item>
+        <item>Adolescent</item>
+        <item>Adult</item>
+        <item>Senior Citizen</item>
+    </string-array>
+
+    <string-array name="age_group_array_value">
+        <item>N</item>
+        <item>I</item>
+        <item>PSAC</item>
+        <item>SAC</item>
+        <item>AD</item>
+        <item>A</item>
+        <item>SC</item>
+    </string-array>
 
 </resources>

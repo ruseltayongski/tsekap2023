@@ -38,11 +38,48 @@
             android:padding="5dp">
 
             <EditText
+                android:id="@+id/manage_household_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Household No."
+                android:padding="5dp"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/manage_philhealth_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="PhilHealth Category (if applicable)"
+                android:focusable="false"
+                android:padding="5dp"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="5dp">
+
+            <EditText
                 android:id="@+id/manage_philhealthId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
-                android:hint="PhilHealth ID"
+                android:hint="PhilHealth ID (if applicable)"
                 android:padding="5dp"
                 android:singleLine="true" />
 
@@ -57,86 +94,41 @@
             android:padding="5dp"
             android:singleLine="true" />
 
-        <com.google.android.material.textfield.TextInputLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/rounded_edittext"
-            android:padding="5dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp">
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/checkBox_nhts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NHTS" />
+
+            <CheckBox
+                android:id="@+id/checkBox_4p"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4Ps" />
+
+            <CheckBox
+                android:id="@+id/checkBox_ip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IP" />
 
             <EditText
-                android:id="@+id/manage_nhts"
-                android:layout_width="match_parent"
+                android:id="@+id/manage_4p_number"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:hint="NHTS"
-                android:padding="5dp"
-                android:singleLine="true"
-                android:focusable="false"/>
+                android:layout_weight="1"
+                android:hint="4Ps number"
+                android:visibility="gone" />
 
-        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/rounded_edittext"
-            android:padding="5dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp">
+        </LinearLayout>
 
-            <EditText
-                android:id="@+id/manage_4p"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:hint="4Ps"
-                android:padding="5dp"
-                android:singleLine="true"
-                android:focusable="false" />
 
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/rounded_edittext"
-            android:padding="5dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp">
-
-            <EditText
-                android:id="@+id/manage_ip"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:hint="IP"
-                android:padding="5dp"
-                android:singleLine="true"
-                android:focusable="false" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/layout_head"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/rounded_edittext"
-            android:padding="5dp">
-
-            <EditText
-                android:id="@+id/manage_head"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:focusable="false"
-                android:hint="* Family Head?"
-                android:padding="5dp" />
-        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/layout_relation"
@@ -177,6 +169,25 @@
                 android:hint="* Specify Relation to Head"
                 android:padding="5dp" />
 
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_edittext"
+            android:visibility="gone"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/manage_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:focusable="false"
+                android:hint="* Family Head?"
+                android:padding="5dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -254,6 +265,26 @@
                 android:focusable="false"
                 android:hint="Suffix"
                 android:padding="5dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/manage_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:capitalize="sentences"
+                android:hint="Contact Number"
+                android:inputType="number"
+                android:padding="5dp"
+                android:singleLine="true" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -354,188 +385,8 @@
                 android:background="@android:color/transparent"
                 android:hint="LMP (YYYY - MM - DD)"
                 android:inputType="number"
+                android:focusable="false"
                 android:maxLength="10"
-                android:padding="5dp" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/menarche_frame"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/rounded_edittext"
-            android:padding="5dp"
-            android:visibility="gone">
-
-            <EditText
-                android:id="@+id/manage_menarche"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:focusable="false"
-                android:hint="Menarche"
-                android:padding="5dp" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/menarche_age_frame"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/rounded_edittext"
-            android:padding="5dp"
-            android:visibility="gone"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp">
-
-            <EditText
-                android:id="@+id/manage_menarche_age"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:hint="Age of Menarche"
-                android:padding="5dp"
-                android:inputType="number"/>
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/sexually_frame"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/rounded_edittext"
-            android:padding="5dp"
-            android:visibility="gone">
-
-            <EditText
-                android:id="@+id/manage_sexually"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:focusable="false"
-                android:hint="Sexually Active"
-                android:padding="5dp" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/unmet_frame"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/rounded_edittext"
-            android:padding="5dp"
-            android:visibility="gone">
-
-            <EditText
-                android:id="@+id/manage_unmet"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:focusable="false"
-                android:hint="Unmet Needs"
-                android:padding="5dp" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/rounded_edittext"
-            android:padding="5dp">
-
-            <EditText
-                android:id="@+id/manage_pwd"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:focusable="false"
-                android:hint="Person with Disability"
-                android:padding="5dp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/pwd_frame"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/rounded_edittext"
-            android:padding="5dp"
-            android:visibility="gone"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp">
-
-            <EditText
-                android:id="@+id/manage_pwd_type"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:hint="Specify type of Disability"
-                android:padding="5dp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/rounded_edittext"
-            android:padding="5dp">
-
-            <EditText
-                android:id="@+id/manage_civil"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:focusable="false"
-                android:hint="* Civil Status"
-                android:padding="5dp" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/rounded_edittext"
-            android:padding="5dp">
-
-            <EditText
-                android:id="@+id/manage_religion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:focusable="false"
-                android:hint="* Religion Status"
-                android:padding="5dp" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/religion_frame"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/rounded_edittext"
-            android:padding="5dp"
-            android:visibility="gone"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp">
-
-            <EditText
-                android:id="@+id/manage_other_religion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:hint="* Specify Religion"
                 android:padding="5dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -580,6 +431,7 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -588,15 +440,52 @@
             android:padding="5dp">
 
             <EditText
-                android:id="@+id/manage_contact"
+                android:id="@+id/manage_civil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
-                android:capitalize="sentences"
-                android:hint="Contact Number"
-                android:inputType="number"
-                android:padding="5dp"
-                android:singleLine="true" />
+                android:focusable="false"
+                android:hint="* Civil Status"
+                android:padding="5dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/manage_religion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:focusable="false"
+                android:hint="* Religion Status"
+                android:padding="5dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/religion_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp">
+
+            <EditText
+                android:id="@+id/manage_other_religion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="* Specify Religion"
+                android:padding="5dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -627,6 +516,7 @@
             android:orientation="vertical">
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/income_frame"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -645,6 +535,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/supply_frame"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -663,6 +554,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/toilet_frame"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -700,20 +592,20 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/rounded_edittext"
+        android:padding="5dp">
+
+        <EditText
+            android:id="@+id/manage_balikprobinsya"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/rounded_edittext"
-            android:padding="5dp">
-
-            <EditText
-                android:id="@+id/manage_balikprobinsya"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:focusable="false"
-                android:hint="Balik Probinsya, Bagong Pag asa (BP2)"
-                android:padding="5dp" />
+            android:background="@android:color/transparent"
+            android:focusable="false"
+            android:hint="Balik Probinsya, Bagong Pag asa (BP2)"
+            android:padding="5dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -725,15 +617,13 @@
             android:padding="5dp">
 
             <EditText
-                android:id="@+id/manage_covid"
+                android:id="@+id/manage_ageclassification"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
-                android:capitalize="sentences"
-                android:hint="* Recent Covid Vaccination Status"
-                android:padding="5dp"
-                android:singleLine="true"
-                android:focusable="false"/>
+                android:focusable="false"
+                android:hint="Classification by Age/Health Risk Group"
+                android:padding="5dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -774,44 +664,89 @@
                 android:padding="5dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
+        <LinearLayout
+            android:id="@+id/adult_medication_holder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/rounded_edittext"
-            android:padding="5dp">
+            android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/manage_mental"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:focusable="false"
-                android:hint="Mental Health Medication(clear choice if N/A)"
-                android:padding="5dp" />
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_edittext"
+                android:padding="5dp">
 
-        </com.google.android.material.textfield.TextInputLayout>
+                <EditText
+                    android:id="@+id/manage_hypertension"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:focusable="false"
+                    android:hint="Hypertension Medication(clear choice if N/A)"
+                    android:padding="5dp" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/mental_frame"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/rounded_edittext"
-            android:padding="5dp"
-            android:visibility="gone"
-            android:layout_marginLeft="15dp"
-            android:layout_marginStart="15dp">
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/manage_mental_remarks"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/hypertension_frame"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:singleLine="true"
-                android:background="@android:color/transparent"
-                android:padding="5dp" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_edittext"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp">
 
+                <EditText
+                    android:id="@+id/manage_hypertension_remarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_edittext"
+                android:padding="5dp">
+
+                <EditText
+                    android:id="@+id/manage_diabetes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:focusable="false"
+                    android:hint="Diabetic Medication(clear choice if N/A)"
+                    android:padding="5dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/diabetes_frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_edittext"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp">
+
+                <EditText
+                    android:id="@+id/manage_diabetes_remarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -859,6 +794,44 @@
             android:padding="5dp">
 
             <EditText
+                android:id="@+id/manage_mental"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:focusable="false"
+                android:hint="Mental Health Medication(clear choice if N/A)"
+                android:padding="5dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mental_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp">
+
+            <EditText
+                android:id="@+id/manage_mental_remarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:background="@android:color/transparent"
+                android:padding="5dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="5dp">
+
+            <EditText
                 android:id="@+id/manage_cvd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -889,91 +862,6 @@
                 android:padding="5dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
-
-        <LinearLayout
-            android:id="@+id/adult_medication_holder"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/rounded_edittext"
-                android:padding="5dp">
-
-                <EditText
-                    android:id="@+id/manage_diabetes"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:focusable="false"
-                    android:hint="Diabetic Medication(clear choice if N/A)"
-                    android:padding="5dp" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/diabetes_frame"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/rounded_edittext"
-                android:padding="5dp"
-                android:visibility="gone"
-                android:layout_marginLeft="15dp"
-                android:layout_marginStart="15dp">
-
-                <EditText
-                    android:id="@+id/manage_diabetes_remarks"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:singleLine="true"
-                    android:background="@android:color/transparent"
-                    android:padding="5dp" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/rounded_edittext"
-                android:padding="5dp">
-
-                <EditText
-                    android:id="@+id/manage_hypertension"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:focusable="false"
-                    android:hint="Hypertension Medication(clear choice if N/A)"
-                    android:padding="5dp" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/hypertension_frame"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/rounded_edittext"
-                android:padding="5dp"
-                android:visibility="gone"
-                android:layout_marginLeft="15dp"
-                android:layout_marginStart="15dp">
-
-                <EditText
-                    android:id="@+id/manage_hypertension_remarks"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:singleLine="true"
-                    android:background="@android:color/transparent"
-                    android:padding="5dp" />
-            </com.google.android.material.textfield.TextInputLayout>
-        </LinearLayout>
-
     <LinearLayout
         android:id="@+id/age5_holder"
         android:layout_width="match_parent"
@@ -985,7 +873,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:background="@drawable/rounded_edittext"
-            android:padding="5dp">
+            android:padding="5dp"
+            android:visibility="gone">
 
             <EditText
                 android:id="@+id/manage_nutrition"
@@ -1002,7 +891,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:background="@drawable/rounded_edittext"
-            android:padding="5dp">
+            android:padding="5dp"
+            android:visibility="gone">
 
             <EditText
                 android:id="@+id/manage_immunization"
@@ -1019,7 +909,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:background="@drawable/rounded_edittext"
-            android:padding="5dp">
+            android:padding="5dp"
+            android:visibility="gone">
 
             <EditText
                 android:id="@+id/manage_newborn"
@@ -1051,8 +942,264 @@
 
     </LinearLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="5dp">
 
+            <EditText
+                android:id="@+id/manage_other_medical_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Other Medical History(if applicable)"
+                android:padding="5dp"
+                android:singleLine="true" />
 
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/manage_covid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:capitalize="sentences"
+                android:focusable="false"
+                android:hint="* Recent Covid Vaccination Status"
+                android:padding="5dp"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/sexually_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/manage_sexually"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:focusable="false"
+                android:hint="Sexually Active"
+                android:padding="5dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/family_planning_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/manage_family_planning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:focusable="false"
+                android:hint="Using Family Planning"
+                android:padding="5dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/family_planning_method_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp">
+
+            <EditText
+                android:id="@+id/manage_family_planning_method_remarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:background="@android:color/transparent"
+                android:focusable="false"
+                android:padding="5dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/family_planning_method_other_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp">
+
+            <EditText
+                android:id="@+id/manage_family_planning_method_other_remarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:background="@android:color/transparent"
+                android:padding="5dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/family_planning_status_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp">
+
+            <EditText
+                android:id="@+id/manage_family_planning_status_remarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:background="@android:color/transparent"
+                android:focusable="false"
+                android:padding="5dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/family_planning_status_other_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp">
+
+            <EditText
+                android:id="@+id/manage_family_planning_status_other_remarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:background="@android:color/transparent"
+                android:padding="5dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/unmet_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/manage_unmet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:focusable="false"
+                android:hint="Unmet Needs"
+                android:padding="5dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/menarche_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/manage_menarche"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:focusable="false"
+                android:hint="Menarche"
+                android:padding="5dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/menarche_age_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp">
+
+            <EditText
+                android:id="@+id/manage_menarche_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Age of Menarche"
+                android:padding="5dp"
+                android:inputType="number"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/manage_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:focusable="false"
+                android:hint="Person with Disability"
+                android:padding="5dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pwd_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp">
+
+            <EditText
+                android:id="@+id/manage_pwd_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Specify type of Disability"
+                android:padding="5dp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/deceased_frame"

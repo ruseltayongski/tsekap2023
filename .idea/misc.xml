@@ -42,6 +42,27 @@
         <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/menu/download_add.xml" value="0.3296875" />
         <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/menu/feedback.xml" value="0.278125" />
         <entry key="..\:/Users/Romaine Lorena/AndroidStudioProjects/TsekApp-master-master/app/src/main/res/xml/network_security_config.xml" value="0.13229166666666667" />
+        <entry key="..\:/Users/Romaine Lorena/Documents/Android/project/tsekap2023/app/src/main/res/layout/activity_chat.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/Romaine Lorena/Documents/Android/project/tsekap2023/app/src/main/res/layout/activity_login.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/Romaine Lorena/Documents/Android/project/tsekap2023/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/Romaine Lorena/Documents/Android/project/tsekap2023/app/src/main/res/layout/app_bar_main.xml" value="0.2" />
+        <entry key="..\:/Users/Romaine Lorena/Documents/Android/project/tsekap2023/app/src/main/res/layout/chat_list_item.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Romaine Lorena/Documents/Android/project/tsekap2023/app/src/main/res/layout/content_main.xml" value="0.20625" />
+        <entry key="..\:/Users/Romaine Lorena/Documents/Android/project/tsekap2023/app/src/main/res/layout/fragment_home.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Romaine Lorena/Documents/Android/project/tsekap2023/app/src/main/res/layout/fragment_manage_member.xml" value="0.21" />
+        <entry key="..\:/Users/Romaine Lorena/Documents/Android/project/tsekap2023/app/src/main/res/layout/list_layout.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Romaine Lorena/Documents/Android/project/tsekap2023/app/src/main/res/layout/new_message_dialog.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/Romaine Lorena/Documents/Android/project/tsekap2023/app/src/main/res/layout/options_dialog.xml" value="0.33" />
+        <entry key="..\:/Users/Romaine Lorena/Documents/Android/project/tsekap2023/app/src/main/res/layout/pin_dialog.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/Romaine Lorena/Documents/Android/project/tsekap2023/app/src/main/res/layout/population_dialog.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/Romaine Lorena/Documents/Android/project/tsekap2023/app/src/main/res/layout/population_item.xml" value="0.25" />
+        <entry key="..\:/Users/Romaine Lorena/Documents/Android/project/tsekap2023/app/src/main/res/layout/population_list_dialog.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/Romaine Lorena/Documents/Android/project/tsekap2023/app/src/main/res/layout/schedule_dialog.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/Romaine Lorena/Documents/Android/project/tsekap2023/app/src/main/res/menu/activity_main_drawer.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Romaine Lorena/Documents/Android/project/tsekap2023/app/src/main/res/menu/add_head.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Romaine Lorena/Documents/Android/project/tsekap2023/app/src/main/res/menu/download.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/Romaine Lorena/Documents/Android/project/tsekap2023/app/src/main/res/menu/download_add.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/Romaine Lorena/Documents/Android/project/tsekap2023/app/src/main/res/menu/feedback.xml" value="0.20520833333333333" />
       </map>
     </option>
   </component>

@@ -66,9 +66,12 @@ public class DBHelper extends SQLiteOpenHelper {
                 "(id integer, " +
                 "uniqueId varchar(100), " +
                 "familyId varchar(50), " +
+                "household_num varchar(50), " +
+                "philhealth_categ varchar(10), " +
                 "philId varchar(50), " +
                 "nhts varchar(50), " +
                 "four_ps varchar(50), " +
+                "fourps_num varchar(50), " +
                 "ip varchar(50), " +
                 "isHead varchar(50), " +
                 "relation varchar(50), " +
@@ -77,42 +80,45 @@ public class DBHelper extends SQLiteOpenHelper {
                 "mname varchar(50), " +
                 "lname varchar(50), " +
                 "suffix varchar(50), " +
+                "contact varchar(15), " +
                 "dob varchar(50), " +
+                "birth_place varchar(15), " +
                 "sex varchar(50), " +
                 "barangayId varchar(50), " +
                 "muncityId varchar(50),  " +
                 "provinceId varchar(50), " +
+                "height varchar(10), " +
+                "weight varchar(10), " +
+                "civil_status varchar(15), " +
+                "religion varchar(30)," +
+                "other_religion varchar(30)," +
                 "income varchar(50), " +
-                "unmetNeed varchar(50), " +
                 "waterSupply varchar(50), " +
                 "sanitaryToilet varchar(50), " +
                 "educationalAttainment varchar(50)," +
                 "balik_probinsya varchar(50)," +
-                "status varchar(3)," +
-
-                "pwd varchar(5)," +
-                "pregnant varchar(15)," +
-
-                "birth_place varchar(15)," +
-                "civil_status varchar(15)," +
-                "religion varchar(30)," +
-                "other_religion varchar(30)," +
-                "contact varchar(15)," +
-                "height varchar(10)," +
-                "weight varchar(10)," +
+                "health_group varchar(30), " +
                 "cancer varchar(5)," +
                 "cancer_type varchar(100)," +
-                "covid_status varchar(30)," +
-                "menarche varchar(30)," +
-                "menarche_age varchar(30)," +
+                "status varchar(3)," +
                 "newborn_screen varchar(5)," +
                 "newborn_text varchar(50)," +
                 "deceased varchar(5)," +
                 "deceased_date varchar(50)," +
-                "immu_stat varchar(100)," +
-                "nutri_stat varchar(100)," +
-                "pwd_desc varchar(100)," +
-                "sexually_active varchar(5))";
+                "other_med_history varchar(50), " +
+                "covid_status varchar(30)," +
+                "menarche varchar(30)," +
+                "menarche_age varchar(30)," +
+                "sexually_active varchar(5), " +
+                "fam_plan varchar(10), " +
+                "fam_plan_method varchar(10), " +
+                "fam_plan_other_method varchar(50), " +
+                "fam_plan_status varchar(20), " +
+                "fam_plan_other_status varchar(50), " +
+                "unmetNeed varchar(50), " +
+                "pwd varchar(5)," +
+                "pwd_desc varchar(100), " +
+                "pregnant varchar(15))";
 
         String sql2 = "Create table " + SERVICES + " (id integer primary key autoincrement, request TEXT)";
 
@@ -310,9 +316,12 @@ public class DBHelper extends SQLiteOpenHelper {
         cv.put("id", familyProfile.id);
         cv.put("uniqueId", familyProfile.uniqueId);
         cv.put("familyId", familyProfile.familyId);
+        cv.put("household_num", familyProfile.household_num);
+        cv.put("philhealth_categ", familyProfile.philhealth_categ);
         cv.put("philId", familyProfile.philId);
         cv.put("nhts", familyProfile.nhts);
         cv.put("four_ps", familyProfile.four_ps);
+        cv.put("fourps_num", familyProfile.fourps_num);
         cv.put("ip", familyProfile.ip);
 
         cv.put("isHead", familyProfile.isHead);
@@ -322,42 +331,45 @@ public class DBHelper extends SQLiteOpenHelper {
         cv.put("mname", familyProfile.mname);
         cv.put("lname", familyProfile.lname);
         cv.put("suffix", familyProfile.suffix);
+        cv.put("contact", familyProfile.contact);
         cv.put("dob", familyProfile.dob);
+        cv.put("birth_place", familyProfile.birth_place);
         cv.put("sex", familyProfile.sex);
         cv.put("barangayId", familyProfile.barangayId);
         cv.put("muncityId", familyProfile.muncityId);
         cv.put("provinceId", familyProfile.provinceId);
+        cv.put("height", familyProfile.height);
+        cv.put("weight", familyProfile.weight);
+        cv.put("civil_status", familyProfile.civil_status);
+        cv.put("religion", familyProfile.religion);
+        cv.put("other_religion", familyProfile.other_religion);
         cv.put("income", familyProfile.income);
-        cv.put("unmetNeed", familyProfile.unmetNeed);
         cv.put("waterSupply", familyProfile.waterSupply);
         cv.put("sanitaryToilet", familyProfile.sanitaryToilet);
         cv.put("educationalAttainment", familyProfile.educationalAttainment);
         cv.put("balik_probinsya", familyProfile.balik_probinsya);
-        cv.put("status", familyProfile.status);
-
-        cv.put("pwd", familyProfile.pwd);
-        cv.put("pregnant", familyProfile.pregnant);
-
-        cv.put("birth_place", familyProfile.birth_place);
-        cv.put("civil_status", familyProfile.civil_status);
-        cv.put("religion", familyProfile.religion);
-        cv.put("other_religion", familyProfile.other_religion);
-        cv.put("contact", familyProfile.contact);
-        cv.put("height", familyProfile.height);
-        cv.put("weight", familyProfile.weight);
+        cv.put("health_group", familyProfile.health_group);
         cv.put("cancer", familyProfile.cancer);
         cv.put("cancer_type", familyProfile.cancer_type);
-        cv.put("covid_status", familyProfile.covid_status);
-        cv.put("menarche", familyProfile.menarche);
-        cv.put("menarche_age", familyProfile.menarche_age);
+        cv.put("status", familyProfile.status);
         cv.put("newborn_screen", familyProfile.newborn_screen);
         cv.put("newborn_text", familyProfile.newborn_text);
         cv.put("deceased", familyProfile.deceased);
         cv.put("deceased_date", familyProfile.deceased_date);
-        cv.put("immu_stat", familyProfile.immu_stat);
-        cv.put("nutri_stat", familyProfile.nutri_stat);
-        cv.put("pwd_desc", familyProfile.pwd_desc);
+        cv.put("other_med_history", familyProfile.other_med_history);
+        cv.put("covid_status", familyProfile.covid_status);
+        cv.put("menarche", familyProfile.menarche);
+        cv.put("menarche_age", familyProfile.menarche_age);
         cv.put("sexually_active", familyProfile.sexually_active);
+        cv.put("fam_plan", familyProfile.fam_plan);
+        cv.put("fam_plan_method", familyProfile.fam_plan_method);
+        cv.put("fam_plan_other_method", familyProfile.fam_plan_other_method);
+        cv.put("fam_plan_status", familyProfile.fam_plan_status);
+        cv.put("fam_plan_other_status", familyProfile.fam_plan_other_status);
+        cv.put("unmetNeed", familyProfile.unmetNeed);
+        cv.put("pregnant", familyProfile.pregnant);
+        cv.put("pwd", familyProfile.pwd);
+        cv.put("pwd_desc", familyProfile.pwd_desc);
         db.insertWithOnConflict(PROFILES, null, cv, SQLiteDatabase.CONFLICT_IGNORE);
         db.close();
     }
@@ -368,11 +380,13 @@ public class DBHelper extends SQLiteOpenHelper {
         cv.put("id", familyProfile.id);
         cv.put("uniqueId", familyProfile.uniqueId);
         cv.put("familyId", familyProfile.familyId);
+        cv.put("household_num", familyProfile.household_num);
+        cv.put("philhealth_categ", familyProfile.philhealth_categ);
         cv.put("philId", familyProfile.philId);
         cv.put("nhts", familyProfile.nhts);
         cv.put("four_ps", familyProfile.four_ps);
+        cv.put("fourps_num", familyProfile.fourps_num);
         cv.put("ip", familyProfile.ip);
-
         cv.put("isHead", familyProfile.isHead);
         cv.put("relation", familyProfile.relation);
         cv.put("member_others", familyProfile.member_others);
@@ -380,42 +394,45 @@ public class DBHelper extends SQLiteOpenHelper {
         cv.put("mname", familyProfile.mname);
         cv.put("lname", familyProfile.lname);
         cv.put("suffix", familyProfile.suffix);
+        cv.put("contact", familyProfile.contact);
         cv.put("dob", familyProfile.dob);
+        cv.put("birth_place", familyProfile.birth_place);
         cv.put("sex", familyProfile.sex);
         cv.put("barangayId", familyProfile.barangayId);
         cv.put("muncityId", familyProfile.muncityId);
         cv.put("provinceId", familyProfile.provinceId);
+        cv.put("height", familyProfile.height);
+        cv.put("weight", familyProfile.weight);
+        cv.put("civil_status", familyProfile.civil_status);
+        cv.put("religion", familyProfile.religion);
+        cv.put("other_religion", familyProfile.other_religion);
         cv.put("income", familyProfile.income);
-        cv.put("unmetNeed", familyProfile.unmetNeed);
         cv.put("waterSupply", familyProfile.waterSupply);
         cv.put("sanitaryToilet", familyProfile.sanitaryToilet);
         cv.put("educationalAttainment", familyProfile.educationalAttainment);
         cv.put("balik_probinsya", familyProfile.balik_probinsya);
-        cv.put("status", familyProfile.status);
-        cv.put("pwd", familyProfile.pwd);
-        cv.put("pregnant", familyProfile.pregnant);
-
-        cv.put("birth_place", familyProfile.birth_place);
-        cv.put("civil_status", familyProfile.civil_status);
-        cv.put("religion", familyProfile.religion);
-        cv.put("other_religion", familyProfile.other_religion);
-        cv.put("contact", familyProfile.contact);
-        cv.put("height", familyProfile.height);
-        cv.put("weight", familyProfile.weight);
+        cv.put("health_group", familyProfile.health_group);
         cv.put("cancer", familyProfile.cancer);
         cv.put("cancer_type", familyProfile.cancer_type);
-        cv.put("covid_status", familyProfile.covid_status);
-        cv.put("menarche", familyProfile.menarche);
-        cv.put("menarche_age", familyProfile.menarche_age);
+        cv.put("status", familyProfile.status);
         cv.put("newborn_screen", familyProfile.newborn_screen);
         cv.put("newborn_text", familyProfile.newborn_text);
         cv.put("deceased", familyProfile.deceased);
         cv.put("deceased_date", familyProfile.deceased_date);
-        cv.put("immu_stat", familyProfile.immu_stat);
-        cv.put("nutri_stat", familyProfile.nutri_stat);
-        cv.put("pwd_desc", familyProfile.pwd_desc);
+        cv.put("other_med_history", familyProfile.other_med_history);
+        cv.put("covid_status", familyProfile.covid_status);
+        cv.put("menarche", familyProfile.menarche);
+        cv.put("menarche_age", familyProfile.menarche_age);
         cv.put("sexually_active", familyProfile.sexually_active);
-
+        cv.put("fam_plan", familyProfile.fam_plan);
+        cv.put("fam_plan_method", familyProfile.fam_plan_method);
+        cv.put("fam_plan_other_method", familyProfile.fam_plan_other_method);
+        cv.put("fam_plan_status", familyProfile.fam_plan_status);
+        cv.put("fam_plan_other_status", familyProfile.fam_plan_other_status);
+        cv.put("unmetNeed", familyProfile.unmetNeed);
+        cv.put("pregnant", familyProfile.pregnant);
+        cv.put("pwd", familyProfile.pwd);
+        cv.put("pwd_desc", familyProfile.pwd_desc);
         db.update(PROFILES, cv, "uniqueId=?", new String[]{familyProfile.uniqueId});
         db.close();
     }
@@ -431,11 +448,190 @@ public class DBHelper extends SQLiteOpenHelper {
                 int id = c.getInt(c.getColumnIndexOrThrow("id"));
                 String uniqueId = c.getString(c.getColumnIndexOrThrow("uniqueId"));
                 String familyId = c.getString(c.getColumnIndexOrThrow("familyId"));
+                String householdNum = c.getString(c.getColumnIndexOrThrow("household_num"));
+                String philhealth_categ = c.getString(c.getColumnIndexOrThrow("philhealth_categ"));
                 String philId = c.getString(c.getColumnIndexOrThrow("philId"));
                 String nhts = c.getString(c.getColumnIndexOrThrow("nhts"));
-                String four_ps = c.getString(c.getColumnIndexOrThrow("four_ps"));
+                String fourPs = c.getString(c.getColumnIndexOrThrow("four_ps"));
+                String fourPsNumber = c.getString(c.getColumnIndexOrThrow("fourps_num"));
                 String ip = c.getString(c.getColumnIndexOrThrow("ip"));
-                String isHead = c.getString(c.getColumnIndexOrThrow("isHead"));
+                String head = c.getString(c.getColumnIndexOrThrow("isHead"));
+                String relation = c.getString(c.getColumnIndexOrThrow("relation"));
+                String member_others = c.getString(c.getColumnIndexOrThrow("member_others"));
+                String fname = c.getString(c.getColumnIndexOrThrow("fname"));
+                String mname = c.getString(c.getColumnIndexOrThrow("mname"));
+                String lname = c.getString(c.getColumnIndexOrThrow("lname"));
+                String suffix = c.getString(c.getColumnIndexOrThrow("suffix"));
+                String dob = c.getString(c.getColumnIndexOrThrow("dob"));
+                String sex = c.getString(c.getColumnIndexOrThrow("sex"));
+                String barangayId = c.getString(c.getColumnIndexOrThrow("barangayId"));
+                String muncityId = c.getString(c.getColumnIndexOrThrow("muncityId"));
+                String provinceId = c.getString(c.getColumnIndexOrThrow("provinceId"));
+                String income = c.getString(c.getColumnIndexOrThrow("income"));
+                String waterSupply = c.getString(c.getColumnIndexOrThrow("waterSupply"));
+                String sanitaryToilet = c.getString(c.getColumnIndexOrThrow("sanitaryToilet"));
+                String educationalAttainment = c.getString(c.getColumnIndexOrThrow("educationalAttainment"));
+                String balik_probinsya = c.getString(c.getColumnIndexOrThrow("balik_probinsya"));
+                String age_class = c.getString(c.getColumnIndexOrThrow("health_group"));
+                String status = c.getString(c.getColumnIndexOrThrow("status"));
+//                String diabetic = c.getString(c.getColumnIndexOrThrow("diabetic"));
+//                String hypertension = c.getString(c.getColumnIndexOrThrow("hypertension"));
+                String pwd = c.getString(c.getColumnIndexOrThrow("pwd"));
+                String pregnant = c.getString(c.getColumnIndexOrThrow("pregnant"));
+
+                String birth_place = c.getString(c.getColumnIndexOrThrow("birth_place"));
+                String civil_status = c.getString(c.getColumnIndexOrThrow("civil_status"));
+                String religion = c.getString(c.getColumnIndexOrThrow("religion"));
+                String other_religion = c.getString(c.getColumnIndexOrThrow("other_religion"));
+                String contact = c.getString(c.getColumnIndexOrThrow("contact"));
+                String height = c.getString(c.getColumnIndexOrThrow("height"));
+                String weight = c.getString(c.getColumnIndexOrThrow("weight"));
+                String cancer = c.getString(c.getColumnIndexOrThrow("cancer"));
+                String cancer_type = c.getString(c.getColumnIndexOrThrow("cancer_type"));
+               /* String mental_med = c.getString(c.getColumnIndexOrThrow("mental_med"));
+                String tbdots_med = c.getString(c.getColumnIndexOrThrow("tbdots_med"));
+                String cvd_med = c.getString(c.getColumnIndexOrThrow("cvd_med"));*/
+                String covid_status = c.getString(c.getColumnIndexOrThrow("covid_status"));
+                String menarche = c.getString(c.getColumnIndexOrThrow("menarche"));
+                String menarche_age = c.getString(c.getColumnIndexOrThrow("menarche_age"));
+                String newborn_screen = c.getString(c.getColumnIndexOrThrow("newborn_screen"));
+                String newborn_text = c.getString(c.getColumnIndexOrThrow("newborn_text"));
+                String deceased = c.getString(c.getColumnIndexOrThrow("deceased"));
+                String deceased_date = c.getString(c.getColumnIndexOrThrow("deceased_date"));
+                String pwd_desc = c.getString(c.getColumnIndexOrThrow("pwd_desc"));
+                String sexually_active = c.getString(c.getColumnIndexOrThrow("sexually_active"));
+                String other_med_history = c.getString(c.getColumnIndexOrThrow("other_med_history"));
+                String familyPlanning = c.getString(c.getColumnIndexOrThrow("fam_plan"));
+                String familyPlanningMethod = c.getString(c.getColumnIndexOrThrow("fam_plan_method"));
+                String familyPlanningOtherMethod = c.getString(c.getColumnIndexOrThrow("fam_plan_other_method"));
+                String familyPlanningStatus = c.getString(c.getColumnIndexOrThrow("fam_plan_status"));
+                String familyPlanningOtherStatus = c.getString(c.getColumnIndexOrThrow("fam_plan_other_status"));
+                String unmet = c.getString(c.getColumnIndexOrThrow("unmetNeed"));
+                String pregnant_date = c.getString(c.getColumnIndexOrThrow("pregnant"));
+
+                FamilyProfile profile = new FamilyProfile(
+                        id + "",
+                        uniqueId, familyId, householdNum, philhealth_categ, philId, nhts, fourPs, fourPsNumber,
+                        ip, head, relation, member_others, fname, mname, lname, suffix, contact, dob,
+                        birth_place, sex, barangayId, muncityId, provinceId, height, weight, civil_status, religion,
+                        other_religion, income, waterSupply, sanitaryToilet, educationalAttainment,
+                        balik_probinsya, age_class, cancer, cancer_type, status, newborn_screen,
+                        newborn_text, deceased, deceased_date, other_med_history, covid_status, menarche,
+                        menarche_age, sexually_active, familyPlanning, familyPlanningMethod, familyPlanningOtherMethod, familyPlanningStatus,
+                        familyPlanningOtherStatus, unmet, pregnant_date, pwd, pwd_desc);
+
+                if(familyId.equals(name.substring(0, name.length()-1)) && relation.equalsIgnoreCase("Head")) profiles.add(0, profile);
+                else profiles.add(profile);
+
+                c.moveToNext();
+            }
+            c.close();
+        }
+        db.close();
+        return profiles;
+    }
+
+    public FamilyProfile getProfileForSync() {
+        FamilyProfile familyProfile = null;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = db.query(PROFILES, null, "status = 1", null, null, null, null, "20");
+
+        if (c.moveToFirst()) {
+            int id = c.getInt(c.getColumnIndexOrThrow("id"));
+            String uniqueId = c.getString(c.getColumnIndexOrThrow("uniqueId"));
+            String familyId = c.getString(c.getColumnIndexOrThrow("familyId"));
+            String householdNum = c.getString(c.getColumnIndexOrThrow("household_num"));
+            String philhealth_categ = c.getString(c.getColumnIndexOrThrow("philhealth_categ"));
+            String philId = c.getString(c.getColumnIndexOrThrow("philId"));
+            String nhts = c.getString(c.getColumnIndexOrThrow("nhts"));
+            String fourPs = c.getString(c.getColumnIndexOrThrow("four_ps"));
+            String fourPsNumber = c.getString(c.getColumnIndexOrThrow("fourps_num"));
+            String ip = c.getString(c.getColumnIndexOrThrow("ip"));
+            String head = c.getString(c.getColumnIndexOrThrow("isHead"));
+            String relation = c.getString(c.getColumnIndexOrThrow("relation"));
+            String member_others = c.getString(c.getColumnIndexOrThrow("member_others"));
+            String fname = c.getString(c.getColumnIndexOrThrow("fname"));
+            String mname = c.getString(c.getColumnIndexOrThrow("mname"));
+            String lname = c.getString(c.getColumnIndexOrThrow("lname"));
+            String suffix = c.getString(c.getColumnIndexOrThrow("suffix"));
+            String dob = c.getString(c.getColumnIndexOrThrow("dob"));
+            String sex = c.getString(c.getColumnIndexOrThrow("sex"));
+            String barangayId = c.getString(c.getColumnIndexOrThrow("barangayId"));
+            String muncityId = c.getString(c.getColumnIndexOrThrow("muncityId"));
+            String provinceId = c.getString(c.getColumnIndexOrThrow("provinceId"));
+            String income = c.getString(c.getColumnIndexOrThrow("income"));
+            String waterSupply = c.getString(c.getColumnIndexOrThrow("waterSupply"));
+            String sanitaryToilet = c.getString(c.getColumnIndexOrThrow("sanitaryToilet"));
+            String educationalAttainment = c.getString(c.getColumnIndexOrThrow("educationalAttainment"));
+            String balik_probinsya = c.getString(c.getColumnIndexOrThrow("balik_probinsya"));
+            String age_class = c.getString(c.getColumnIndexOrThrow("health_group"));
+            String status = c.getString(c.getColumnIndexOrThrow("status"));
+//                String diabetic = c.getString(c.getColumnIndexOrThrow("diabetic"));
+//                String hypertension = c.getString(c.getColumnIndexOrThrow("hypertension"));
+            String pwd = c.getString(c.getColumnIndexOrThrow("pwd"));
+
+            String birth_place = c.getString(c.getColumnIndexOrThrow("birth_place"));
+            String civil_status = c.getString(c.getColumnIndexOrThrow("civil_status"));
+            String religion = c.getString(c.getColumnIndexOrThrow("religion"));
+            String other_religion = c.getString(c.getColumnIndexOrThrow("other_religion"));
+            String contact = c.getString(c.getColumnIndexOrThrow("contact"));
+            String height = c.getString(c.getColumnIndexOrThrow("height"));
+            String weight = c.getString(c.getColumnIndexOrThrow("weight"));
+            String cancer = c.getString(c.getColumnIndexOrThrow("cancer"));
+            String cancer_type = c.getString(c.getColumnIndexOrThrow("cancer_type"));
+            String covid_status = c.getString(c.getColumnIndexOrThrow("covid_status"));
+            String menarche = c.getString(c.getColumnIndexOrThrow("menarche"));
+            String menarche_age = c.getString(c.getColumnIndexOrThrow("menarche_age"));
+            String newborn_screen = c.getString(c.getColumnIndexOrThrow("newborn_screen"));
+            String newborn_text = c.getString(c.getColumnIndexOrThrow("newborn_text"));
+            String deceased = c.getString(c.getColumnIndexOrThrow("deceased"));
+            String deceased_date = c.getString(c.getColumnIndexOrThrow("deceased_date"));
+            String pwd_desc = c.getString(c.getColumnIndexOrThrow("pwd_desc"));
+            String sexually_active = c.getString(c.getColumnIndexOrThrow("sexually_active"));
+            String other_med_history = c.getString(c.getColumnIndexOrThrow("other_med_history"));
+            String familyPlanning = c.getString(c.getColumnIndexOrThrow("fam_plan"));
+            String familyPlanningMethod = c.getString(c.getColumnIndexOrThrow("fam_plan_method"));
+            String familyPlanningOtherMethod = c.getString(c.getColumnIndexOrThrow("fam_plan_other_method"));
+            String familyPlanningStatus = c.getString(c.getColumnIndexOrThrow("fam_plan_status"));
+            String familyPlanningOtherStatus = c.getString(c.getColumnIndexOrThrow("fam_plan_other_status"));
+            String unmet = c.getString(c.getColumnIndexOrThrow("unmetNeed"));
+            String pregnant_date = c.getString(c.getColumnIndexOrThrow("pregnant"));
+
+            familyProfile = new FamilyProfile(
+                    id + "",
+                    uniqueId, familyId, householdNum, philhealth_categ, philId, nhts, fourPs, fourPsNumber,
+                    ip, head, relation, member_others, fname, mname, lname, suffix, contact, dob,
+                    birth_place, sex, barangayId, muncityId, provinceId, height, weight, civil_status, religion,
+                    other_religion, income, waterSupply, sanitaryToilet, educationalAttainment,
+                    balik_probinsya, age_class, cancer, cancer_type, status, newborn_screen,
+                    newborn_text, deceased, deceased_date, other_med_history, covid_status, menarche,
+                    menarche_age, sexually_active, familyPlanning, familyPlanningMethod, familyPlanningOtherMethod, familyPlanningStatus,
+                    familyPlanningOtherStatus, unmet, pregnant_date, pwd, pwd_desc);
+        }
+        c.close();
+        db.close();
+        return familyProfile;
+    }
+
+    public ArrayList<FamilyProfile> getMatchingProfiles(String cFname, String cMname, String cLname, String cSuffix) {
+        ArrayList<FamilyProfile> profiles = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = db.query(PROFILES, null, "fname LIKE ? and mname LIKE ? and lname LIKE ? and suffix LIKE ?",
+                new String[]{cFname + "%", cMname + "%", cLname + "%", cSuffix + "%"}, null, null, null);
+
+        if (c.moveToFirst()) {
+            while (!c.isAfterLast()) {
+                int id = c.getInt(c.getColumnIndexOrThrow("id"));
+                String uniqueId = c.getString(c.getColumnIndexOrThrow("uniqueId"));
+                String familyId = c.getString(c.getColumnIndexOrThrow("familyId"));
+                String householdNum = c.getString(c.getColumnIndexOrThrow("household_num"));
+                String philhealth_categ = c.getString(c.getColumnIndexOrThrow("philhealth_categ"));
+                String philId = c.getString(c.getColumnIndexOrThrow("philId"));
+                String nhts = c.getString(c.getColumnIndexOrThrow("nhts"));
+                String fourPs = c.getString(c.getColumnIndexOrThrow("four_ps"));
+                String fourPsNumber = c.getString(c.getColumnIndexOrThrow("fourps_num"));
+                String ip = c.getString(c.getColumnIndexOrThrow("ip"));
+                String head = c.getString(c.getColumnIndexOrThrow("isHead"));
                 String relation = c.getString(c.getColumnIndexOrThrow("relation"));
                 String member_others = c.getString(c.getColumnIndexOrThrow("member_others"));
                 String fname = c.getString(c.getColumnIndexOrThrow("fname"));
@@ -453,6 +649,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 String sanitaryToilet = c.getString(c.getColumnIndexOrThrow("sanitaryToilet"));
                 String educationalAttainment = c.getString(c.getColumnIndexOrThrow("educationalAttainment"));
                 String balik_probinsya = c.getString(c.getColumnIndexOrThrow("balik_probinsya"));
+                String age_class = c.getString(c.getColumnIndexOrThrow("health_group"));
                 String status = c.getString(c.getColumnIndexOrThrow("status"));
 //                String diabetic = c.getString(c.getColumnIndexOrThrow("diabetic"));
 //                String hypertension = c.getString(c.getColumnIndexOrThrow("hypertension"));
@@ -482,219 +679,26 @@ public class DBHelper extends SQLiteOpenHelper {
                 String nutri_stat = c.getString(c.getColumnIndexOrThrow("nutri_stat"));
                 String pwd_desc = c.getString(c.getColumnIndexOrThrow("pwd_desc"));
                 String sexually_active = c.getString(c.getColumnIndexOrThrow("sexually_active"));
+                String other_med_history = c.getString(c.getColumnIndexOrThrow("other_med_history"));
+                String familyPlanning = c.getString(c.getColumnIndexOrThrow("fam_plan"));
+                String familyPlanningMethod = c.getString(c.getColumnIndexOrThrow("fam_plan_method"));
+                String familyPlanningOtherMethod = c.getString(c.getColumnIndexOrThrow("fam_plan_other_method"));
+                String familyPlanningStatus = c.getString(c.getColumnIndexOrThrow("fam_plan_status"));
+                String familyPlanningOtherStatus = c.getString(c.getColumnIndexOrThrow("fam_plan_other_status"));
+                String unmet = c.getString(c.getColumnIndexOrThrow("unmetNeed"));
+                String pregnant_date = c.getString(c.getColumnIndexOrThrow("pregnant"));
+
 
                 FamilyProfile profile = new FamilyProfile(
                         id + "",
-                        uniqueId, familyId, philId,
-                        nhts, four_ps, ip,
-                        isHead, relation, member_others,
-                        fname, lname, mname, suffix, dob, sex, barangayId, muncityId, provinceId, income, unmetNeed, waterSupply, sanitaryToilet,
-                        educationalAttainment, balik_probinsya, status, pwd, pregnant,
-                        birth_place, civil_status, religion, other_religion, contact, height, weight, cancer, cancer_type,
-                        covid_status, menarche, menarche_age, newborn_screen, newborn_text, deceased, deceased_date,
-                        immu_stat, nutri_stat, pwd_desc, sexually_active);
-
-                if(familyId.equals(name.substring(0, name.length()-1)) && relation.equalsIgnoreCase("Head")) profiles.add(0, profile);
-                else profiles.add(profile);
-
-                c.moveToNext();
-            }
-            c.close();
-        }
-        db.close();
-        return profiles;
-    }
-
-    public FamilyProfile getProfileForSync() {
-        FamilyProfile familyProfile = null;
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c = db.query(PROFILES, null, "status = 1", null, null, null, null, "20");
-
-        if (c.moveToFirst()) {
-            int id = c.getInt(c.getColumnIndexOrThrow("id"));
-            String uniqueId = c.getString(c.getColumnIndexOrThrow("uniqueId"));
-            String familyId = c.getString(c.getColumnIndexOrThrow("familyId"));
-            String philId = c.getString(c.getColumnIndexOrThrow("philId"));
-            String nhts = c.getString(c.getColumnIndexOrThrow("nhts"));
-            String four_ps = c.getString(c.getColumnIndexOrThrow("four_ps"));
-            String ip = c.getString(c.getColumnIndexOrThrow("ip"));
-            String isHead = c.getString(c.getColumnIndexOrThrow("isHead"));
-            String relation = c.getString(c.getColumnIndexOrThrow("relation"));
-            String member_others = c.getString(c.getColumnIndexOrThrow("member_others"));
-            String fname = c.getString(c.getColumnIndexOrThrow("fname"));
-            String mname = c.getString(c.getColumnIndexOrThrow("mname"));
-            String lname = c.getString(c.getColumnIndexOrThrow("lname"));
-            String suffix = c.getString(c.getColumnIndexOrThrow("suffix"));
-            String dob = c.getString(c.getColumnIndexOrThrow("dob"));
-            String sex = c.getString(c.getColumnIndexOrThrow("sex"));
-            String barangayId = c.getString(c.getColumnIndexOrThrow("barangayId"));
-            String muncityId = c.getString(c.getColumnIndexOrThrow("muncityId"));
-            String provinceId = c.getString(c.getColumnIndexOrThrow("provinceId"));
-            String income = c.getString(c.getColumnIndexOrThrow("income"));
-            String unmetNeed = c.getString(c.getColumnIndexOrThrow("unmetNeed"));
-            String waterSupply = c.getString(c.getColumnIndexOrThrow("waterSupply"));
-            String sanitaryToilet = c.getString(c.getColumnIndexOrThrow("sanitaryToilet"));
-            String educationalAttainment = c.getString(c.getColumnIndexOrThrow("educationalAttainment"));
-            String balik_probinsya =  c.getString(c.getColumnIndexOrThrow("balik_probinsya"));
-            String status = c.getString(c.getColumnIndexOrThrow("status"));
-           /* String diabetic = c.getString(c.getColumnIndexOrThrow("diabetic"));
-            String hypertension = c.getString(c.getColumnIndexOrThrow("hypertension"));*/
-            String pwd = c.getString(c.getColumnIndexOrThrow("pwd"));
-            String pregnant = c.getString(c.getColumnIndexOrThrow("pregnant"));
-
-            String birth_place = c.getString(c.getColumnIndexOrThrow("birth_place"));
-            String civil_status = c.getString(c.getColumnIndexOrThrow("civil_status"));
-            String religion = c.getString(c.getColumnIndexOrThrow("religion"));
-            String other_religion = c.getString(c.getColumnIndexOrThrow("other_religion"));
-            String contact = c.getString(c.getColumnIndexOrThrow("contact"));
-            String height = c.getString(c.getColumnIndexOrThrow("height"));
-            String weight = c.getString(c.getColumnIndexOrThrow("weight"));
-            String cancer = c.getString(c.getColumnIndexOrThrow("cancer"));
-            String cancer_type = c.getString(c.getColumnIndexOrThrow("cancer_type"));
-            /*String mental_med = c.getString(c.getColumnIndexOrThrow("mental_med"));
-            String tbdots_med = c.getString(c.getColumnIndexOrThrow("tbdots_med"));
-            String cvd_med = c.getString(c.getColumnIndexOrThrow("cvd_med"));*/
-            String covid_status = c.getString(c.getColumnIndexOrThrow("covid_status"));
-            String menarche = c.getString(c.getColumnIndexOrThrow("menarche"));
-            String menarche_age = c.getString(c.getColumnIndexOrThrow("menarche_age"));
-            String newborn_screen = c.getString(c.getColumnIndexOrThrow("newborn_screen"));
-            String newborn_text = c.getString(c.getColumnIndexOrThrow("newborn_text"));
-            String deceased = c.getString(c.getColumnIndexOrThrow("deceased"));
-            String deceased_date = c.getString(c.getColumnIndexOrThrow("deceased_date"));
-            String immu_stat = c.getString(c.getColumnIndexOrThrow("immu_stat"));
-            String nutri_stat = c.getString(c.getColumnIndexOrThrow("nutri_stat"));
-            String pwd_desc = c.getString(c.getColumnIndexOrThrow("pwd_desc"));
-            String sexually_active = c.getString(c.getColumnIndexOrThrow("sexually_active"));
-
-            familyProfile = new FamilyProfile(
-                    id + "",
-                    uniqueId,
-                    familyId,
-                    philId,
-                    nhts,
-                    four_ps,
-                    ip,
-                    isHead,
-                    relation, member_others,
-                    fname,
-                    lname,
-                    mname,
-                    suffix,
-                    dob,
-                    sex,
-                    barangayId,
-                    muncityId,
-                    provinceId,
-                    income,
-                    unmetNeed,
-                    waterSupply,
-                    sanitaryToilet,
-                    educationalAttainment, balik_probinsya,
-                    status,
-                    pwd,
-                    pregnant,
-                    birth_place, civil_status, religion, other_religion, contact, height, weight, cancer, cancer_type,
-                    covid_status, menarche, menarche_age, newborn_screen, newborn_text, deceased, deceased_date,
-                    immu_stat, nutri_stat,pwd_desc, sexually_active);
-        }
-        c.close();
-        db.close();
-        return familyProfile;
-    }
-
-    public ArrayList<FamilyProfile> getMatchingProfiles(String cFname, String cMname, String cLname, String cSuffix) {
-        ArrayList<FamilyProfile> profiles = new ArrayList<>();
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c = db.query(PROFILES, null, "fname LIKE ? and mname LIKE ? and lname LIKE ? and suffix LIKE ?",
-                new String[]{cFname + "%", cMname + "%", cLname + "%", cSuffix + "%"}, null, null, null);
-
-        if (c.moveToFirst()) {
-            while (!c.isAfterLast()) {
-                int id = c.getInt(c.getColumnIndexOrThrow("id"));
-                String uniqueId = c.getString(c.getColumnIndexOrThrow("uniqueId"));
-                String familyId = c.getString(c.getColumnIndexOrThrow("familyId"));
-                String philId = c.getString(c.getColumnIndexOrThrow("philId"));
-                String nhts= c.getString(c.getColumnIndexOrThrow("nhts"));
-                String four_ps = c.getString(c.getColumnIndexOrThrow("four_ps"));
-                String ip = c.getString(c.getColumnIndexOrThrow("ip"));
-                String isHead = c.getString(c.getColumnIndexOrThrow("isHead"));
-                String relation = c.getString(c.getColumnIndexOrThrow("relation"));
-                String member_others = c.getString(c.getColumnIndexOrThrow("member_others"));
-                String fname = c.getString(c.getColumnIndexOrThrow("fname"));
-                String mname = c.getString(c.getColumnIndexOrThrow("mname"));
-                String lname = c.getString(c.getColumnIndexOrThrow("lname"));
-                String suffix = c.getString(c.getColumnIndexOrThrow("suffix"));
-                String dob = c.getString(c.getColumnIndexOrThrow("dob"));
-                String sex = c.getString(c.getColumnIndexOrThrow("sex"));
-                String barangayId = c.getString(c.getColumnIndexOrThrow("barangayId"));
-                String muncityId = c.getString(c.getColumnIndexOrThrow("muncityId"));
-                String provinceId = c.getString(c.getColumnIndexOrThrow("provinceId"));
-                String income = c.getString(c.getColumnIndexOrThrow("income"));
-                String unmetNeed = c.getString(c.getColumnIndexOrThrow("unmetNeed"));
-                String waterSupply = c.getString(c.getColumnIndexOrThrow("waterSupply"));
-                String sanitaryToilet = c.getString(c.getColumnIndexOrThrow("sanitaryToilet"));
-                String educationalAttainment = c.getString(c.getColumnIndexOrThrow("educationalAttainment"));
-                String balik_probinsya = c.getString(c.getColumnIndexOrThrow("balik_probinsya"));
-                String status = c.getString(c.getColumnIndexOrThrow("status"));
-                /*String diabetic = c.getString(c.getColumnIndexOrThrow("diabetic"));
-                String hypertension = c.getString(c.getColumnIndexOrThrow("hypertension"));*/
-                String pwd = c.getString(c.getColumnIndexOrThrow("pwd"));
-                String pregnant = c.getString(c.getColumnIndexOrThrow("pregnant"));
-
-                String birth_place = c.getString(c.getColumnIndexOrThrow("birth_place"));
-                String civil_status = c.getString(c.getColumnIndexOrThrow("civil_status"));
-                String religion = c.getString(c.getColumnIndexOrThrow("religion"));
-                String other_religion = c.getString(c.getColumnIndexOrThrow("other_religion"));
-                String contact = c.getString(c.getColumnIndexOrThrow("contact"));
-                String height = c.getString(c.getColumnIndexOrThrow("height"));
-                String weight = c.getString(c.getColumnIndexOrThrow("weight"));
-                String cancer = c.getString(c.getColumnIndexOrThrow("cancer"));
-                String cancer_type = c.getString(c.getColumnIndexOrThrow("cancer_type"));
-                /*String mental_med = c.getString(c.getColumnIndexOrThrow("mental_med"));
-                String tbdots_med = c.getString(c.getColumnIndexOrThrow("tbdots_med"));
-                String cvd_med = c.getString(c.getColumnIndexOrThrow("cvd_med"));*/
-                String covid_status = c.getString(c.getColumnIndexOrThrow("covid_status"));
-                String menarche = c.getString(c.getColumnIndexOrThrow("menarche"));
-                String menarche_age = c.getString(c.getColumnIndexOrThrow("menarche_age"));
-                String newborn_screen = c.getString(c.getColumnIndexOrThrow("newborn_screen"));
-                String newborn_text = c.getString(c.getColumnIndexOrThrow("newborn_text"));
-                String deceased = c.getString(c.getColumnIndexOrThrow("deceased"));
-                String deceased_date = c.getString(c.getColumnIndexOrThrow("deceased_date"));
-                String immu_stat = c.getString(c.getColumnIndexOrThrow("immu_stat"));
-                String nutri_stat = c.getString(c.getColumnIndexOrThrow("nutri_stat"));
-                String pwd_desc = c.getString(c.getColumnIndexOrThrow("pwd_desc"));
-                String sexually_active = c.getString(c.getColumnIndexOrThrow("sexually_active"));
-
-                FamilyProfile profile = new FamilyProfile(
-                        id + "",
-                        uniqueId,
-                        familyId,
-                        philId,
-                        nhts,
-                        four_ps,
-                        ip,
-                        isHead,
-                        relation, member_others,
-                        fname,
-                        lname,
-                        mname,
-                        suffix,
-                        dob,
-                        sex,
-                        barangayId,
-                        muncityId,
-                        provinceId,
-                        income,
-                        unmetNeed,
-                        waterSupply,
-                        sanitaryToilet,
-                        educationalAttainment, balik_probinsya,
-                        status,
-                        pwd,
-                        pregnant,
-                        birth_place, civil_status, religion, other_religion, contact, height, weight, cancer, cancer_type,
-                        covid_status, menarche, menarche_age, newborn_screen, newborn_text, deceased, deceased_date,
-                        immu_stat, nutri_stat, pwd_desc, sexually_active);
+                        uniqueId, familyId, householdNum, philhealth_categ, philId, nhts, fourPs, fourPsNumber,
+                        ip, head, relation, member_others, fname, mname, lname, suffix, contact, dob,
+                        birth_place, sex, barangayId, muncityId, provinceId, height, weight, civil_status, religion,
+                        other_religion, income, waterSupply, sanitaryToilet, educationalAttainment,
+                        balik_probinsya, age_class, cancer, cancer_type, status, newborn_screen,
+                        newborn_text, deceased, deceased_date, other_med_history, covid_status, menarche,
+                        menarche_age, sexually_active, familyPlanning, familyPlanningMethod, familyPlanningOtherMethod, familyPlanningStatus,
+                        familyPlanningOtherStatus, unmet, pregnant_date, pwd, pwd_desc);
 
                 if(relation.equalsIgnoreCase("Head")) profiles.add(0, profile);
                 else profiles.add(profile);
